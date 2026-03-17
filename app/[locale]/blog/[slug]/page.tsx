@@ -93,7 +93,7 @@ export default async function BlogPostPage({
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-(--color-primary)/10 text-(--color-primary)"
+                className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-(--color-primary)"
               >
                 <TagIcon className="w-3 h-3" />
                 {tag}

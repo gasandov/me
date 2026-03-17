@@ -97,6 +97,14 @@ export function Nav() {
               {t("blog")}
             </Link>
           </li>
+          <li>
+            <Link
+              href="/photos"
+              className="text-sm text-(--color-muted-foreground) hover:text-(--color-foreground) transition-colors"
+            >
+              {t("photos")}
+            </Link>
+          </li>
         </ul>
 
         {/* Right controls */}
@@ -172,6 +180,14 @@ export function Nav() {
                 className="block text-sm text-(--color-muted-foreground) hover:text-(--color-foreground) transition-colors py-1"
               >
                 {t("blog")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/photos"
+                className="block text-sm text-(--color-muted-foreground) hover:text-(--color-foreground) transition-colors py-1"
+              >
+                {t("photos")}
               </Link>
             </li>
             {/* Locale switcher (mobile) */}

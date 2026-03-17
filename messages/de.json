@@ -53,18 +53,24 @@
   },
   "photos": {
     "heading": "Fotos",
-    "description": "Eine Sammlung von Momenten."
+    "description": "Eine Sammlung von Momenten.",
+    "noPhotos": "Noch keine Fotos – schau bald wieder vorbei!"
   },
   "now": {
     "heading": "Jetzt",
-    "description": "Woran ich mich gerade konzentriere."
+    "description": "Woran ich mich gerade konzentriere.",
+    "lastUpdated": "Zuletzt aktualisiert"
   },
   "uses": {
     "heading": "Werkzeuge",
-    "description": "Mein Hardware-, Editor- und Tools-Setup."
+    "description": "Mein Hardware-, Editor- und Tools-Setup.",
+    "lastUpdated": "Zuletzt aktualisiert"
   },
   "footer": {
     "madeWith": "Erstellt mit Next.js & Tailwind CSS",
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "now": "Jetzt",
+    "uses": "Werkzeuge",
+    "photos": "Fotos"
   }
 }

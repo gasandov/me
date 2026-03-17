@@ -53,18 +53,24 @@
   },
   "photos": {
     "heading": "Fotos",
-    "description": "Una colección de momentos."
+    "description": "Una colección de momentos.",
+    "noPhotos": "Todavía no hay fotos — ¡vuelve pronto!"
   },
   "now": {
     "heading": "Ahora",
-    "description": "En qué estoy enfocado actualmente."
+    "description": "En qué estoy enfocado actualmente.",
+    "lastUpdated": "Última actualización"
   },
   "uses": {
     "heading": "Herramientas",
-    "description": "Mi configuración de hardware, editor y herramientas."
+    "description": "Mi configuración de hardware, editor y herramientas.",
+    "lastUpdated": "Última actualización"
   },
   "footer": {
     "madeWith": "Construido con Next.js & Tailwind CSS",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "now": "Ahora",
+    "uses": "Herramientas",
+    "photos": "Fotos"
   }
 }
