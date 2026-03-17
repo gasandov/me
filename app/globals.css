@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
 
 /* Class-based dark mode for next-themes */
 @custom-variant dark (&:where(.dark, .dark *));
