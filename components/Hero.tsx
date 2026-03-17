@@ -36,7 +36,7 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center"
       >
-        <div className="h-[600px] w-[600px] rounded-full bg-(--color-primary)/5 blur-3xl" />
+        <div className="h-[600px] w-[600px] rounded-full bg-primary/5 blur-3xl" />
       </div>
 
       <motion.div
@@ -47,28 +47,28 @@ export function Hero() {
       >
         <motion.p
           variants={item}
-          className="font-mono text-sm text-(--color-primary) mb-3 tracking-widest uppercase"
+          className="font-mono text-sm text-primary mb-3 tracking-widest uppercase"
         >
           {t("greeting")}
         </motion.p>
 
         <motion.h1
           variants={item}
-          className="text-5xl sm:text-7xl font-bold tracking-tight text-(--color-foreground) mb-4"
+          className="text-5xl sm:text-7xl font-bold tracking-tight text-foreground mb-4"
         >
           {t("name")}
         </motion.h1>
 
         <motion.h2
           variants={item}
-          className="text-xl sm:text-2xl font-medium text-(--color-muted-foreground) mb-6"
+          className="text-xl sm:text-2xl font-medium text-muted-foreground mb-6"
         >
           {t("title")}
         </motion.h2>
 
         <motion.p
           variants={item}
-          className="text-(--color-muted-foreground) max-w-xl mx-auto mb-10 leading-relaxed text-base sm:text-lg"
+          className="text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed text-base sm:text-lg"
         >
           {t("tagline")}
         </motion.p>
@@ -81,13 +81,13 @@ export function Hero() {
             href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-(--color-primary) text-(--color-primary-foreground) font-semibold text-sm shadow-lg hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+            className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm shadow-lg hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-primary"
           >
             {t("cta_resume")}
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-(--color-border) text-(--color-foreground) font-semibold text-sm hover:bg-(--color-muted) transition-colors focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+            className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-border text-foreground font-semibold text-sm hover:bg-muted transition-colors focus-visible:outline-2 focus-visible:outline-primary"
           >
             {t("cta_contact")}
           </a>
@@ -101,7 +101,7 @@ export function Hero() {
         transition={{ delay: 1.4, duration: 0.6 }}
       >
         <a href="#about" aria-label="Scroll to About">
-          <ArrowDownIcon className="w-5 h-5 text-(--color-muted-foreground) animate-bounce" />
+          <ArrowDownIcon className="w-5 h-5 text-muted-foreground animate-bounce" />
         </a>
       </motion.div>
     </section>

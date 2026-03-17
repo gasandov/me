@@ -8,26 +8,26 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-(--color-border) py-8 px-4">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-(--color-muted-foreground)">
+    <footer className="border-t border-border py-8 px-4">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
         <p>{t("madeWith")}</p>
 
         <nav aria-label="Footer navigation" className="flex items-center gap-4">
           <Link
             href="/photos"
-            className="hover:text-(--color-foreground) transition-colors"
+            className="hover:text-foreground transition-colors"
           >
             {t("photos")}
           </Link>
           <Link
             href="/now"
-            className="hover:text-(--color-foreground) transition-colors"
+            className="hover:text-foreground transition-colors"
           >
             {t("now")}
           </Link>
           <Link
             href="/uses"
-            className="hover:text-(--color-foreground) transition-colors"
+            className="hover:text-foreground transition-colors"
           >
             {t("uses")}
           </Link>

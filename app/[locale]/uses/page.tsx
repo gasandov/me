@@ -75,14 +75,14 @@ export default async function UsesPage({
     <div className="min-h-screen pt-24 pb-20">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <header className="mb-10">
-          <h1 className="text-4xl font-bold text-(--color-foreground) mb-3">
+          <h1 className="text-4xl font-bold text-foreground mb-3">
             {t("heading")}
           </h1>
-          <p className="text-(--color-muted-foreground) mb-4">
+          <p className="text-muted-foreground mb-4">
             {t("description")}
           </p>
           {formattedDate && (
-            <p className="text-xs text-(--color-muted-foreground) border-t border-(--color-border) pt-4">
+            <p className="text-xs text-muted-foreground border-t border-border pt-4">
               {t("lastUpdated")}:{" "}
               <time dateTime={doc.frontmatter.lastUpdated}>
                 {formattedDate}
@@ -91,7 +91,7 @@ export default async function UsesPage({
           )}
         </header>
 
-        <article className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:text-(--color-foreground) prose-p:text-(--color-foreground)/90 prose-p:leading-relaxed prose-a:text-(--color-primary) prose-a:no-underline hover:prose-a:underline prose-code:text-(--color-primary) prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-(--color-muted) prose-pre:border prose-pre:border-(--color-border) prose-blockquote:border-l-4 prose-blockquote:border-(--color-primary) prose-blockquote:pl-4 prose-blockquote:italic prose-li:text-(--color-foreground)/90 prose-table:text-sm prose-th:text-(--color-foreground) prose-td:text-(--color-foreground)/90">
+        <article className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-foreground/90 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-li:text-foreground/90 prose-table:text-sm prose-th:text-foreground prose-td:text-foreground/90">
           <MDXRemote source={doc.content} />
         </article>
       </div>

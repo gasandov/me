@@ -63,19 +63,19 @@ export function ContactSection() {
         >
           <motion.p
             variants={fadeUp}
-            className="font-mono text-xs text-(--color-primary) uppercase tracking-widest mb-3"
+            className="font-mono text-xs text-primary uppercase tracking-widest mb-3"
           >
             05
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl font-bold mb-4 text-(--color-foreground)"
+            className="text-3xl sm:text-4xl font-bold mb-4 text-foreground"
           >
             {t("heading")}
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-(--color-muted-foreground) text-base sm:text-lg leading-relaxed mb-10 max-w-xl mx-auto"
+            className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-10 max-w-xl mx-auto"
           >
             {t("description")}
           </motion.p>
@@ -86,7 +86,7 @@ export function ContactSection() {
           >
             <a
               href="mailto:german.sandoval.i@gmail.com"
-              className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-(--color-primary) text-(--color-primary-foreground) font-semibold text-sm shadow-lg hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm shadow-lg hover:opacity-90 transition-opacity"
             >
               <EnvelopeIcon className="w-4 h-4" />
               {t("email")}
@@ -98,7 +98,7 @@ export function ContactSection() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full border border-(--color-border) text-(--color-foreground) font-semibold text-sm hover:bg-(--color-muted) transition-colors"
+                className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full border border-border text-foreground font-semibold text-sm hover:bg-muted transition-colors"
               >
                 {icon}
                 {t(key)}
@@ -108,12 +108,12 @@ export function ContactSection() {
 
           <motion.p
             variants={fadeUp}
-            className="text-sm text-(--color-muted-foreground)"
+            className="text-sm text-muted-foreground"
           >
             You can also reach me at{" "}
             <a
               href="mailto:german.sandoval.i@gmail.com"
-              className="text-(--color-primary) hover:underline underline-offset-4"
+              className="text-primary hover:underline underline-offset-4"
             >
               german.sandoval.i@gmail.com
             </a>

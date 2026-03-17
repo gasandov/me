@@ -22,19 +22,49 @@
   "about": {
     "heading": "About Me",
     "bio": "I'm a passionate software engineer with experience building modern web applications. I love clean architecture, great developer experience, and shipping products people enjoy.",
-    "location": "Based in Mexico City",
+    "location": "Based in Merida",
     "status": "Open to new opportunities"
   },
   "experience": {
-    "heading": "Experience"
+    "heading": "Experience",
+    "present": "Present",
+    "wizeline": {
+      "role": "Senior Software Engineer",
+      "location": "Guadalajara, MX (Remote)",
+      "bullet_0": "Architected a real-time data pipeline processing 2M+ events/day for a US fintech client, reducing latency by 70%.",
+      "bullet_1": "Led a squad of 5 engineers, driving TypeScript adoption and establishing team code-review standards.",
+      "bullet_2": "Designed and shipped a micro-frontend architecture with Module Federation, cutting time-to-feature by 35%.",
+      "bullet_3": "Championed observability improvements (OpenTelemetry + Datadog), reducing mean time to recovery from 45 min to 8 min."
+    },
+    "softtek": {
+      "role": "Full-Stack Developer",
+      "location": "Merida, MX",
+      "bullet_0": "Built and maintained 4 client-facing web applications across retail and healthcare verticals.",
+      "bullet_1": "Integrated Stripe and Conekta payment gateways, enabling $500K/month in transactions.",
+      "bullet_2": "Revamped CI/CD pipelines with GitHub Actions, reducing deploy times from 30 min to under 7 min.",
+      "bullet_3": "Delivered a headless CMS migration (Contentful) that improved editor experience and content velocity."
+    },
+    "freelance": {
+      "role": "Junior Web Developer",
+      "location": "Merida, MX",
+      "bullet_0": "Developed responsive websites and small SPAs for 10+ local businesses and startups.",
+      "bullet_1": "Built a custom e-commerce solution with a real-time inventory dashboard for a local retailer.",
+      "bullet_2": "Worked directly with clients to gather requirements, iterate on designs, and deliver on time."
+    }
   },
   "skills": {
-    "heading": "Skills"
+    "heading": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Databases & Storage",
+    "devops": "DevOps & Tools"
   },
   "projects": {
     "heading": "Projects",
     "viewCode": "View Code",
-    "viewDemo": "Live Demo"
+    "viewDemo": "Live Demo",
+    "featured": "Featured",
+    "me_description": "My personal portfolio and blog. Built with Next.js App Router, next-intl for multilingual support (EN/ES), Tailwind CSS v4, and framer-motion animations. Features dark mode, MDX blog, dynamic OG images, and RSS feed."
   },
   "contact": {
     "heading": "Contact",

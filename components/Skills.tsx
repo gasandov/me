@@ -18,14 +18,14 @@ const stagger: Variants = {
 };
 
 interface SkillCategory {
-  label: string;
+  labelKey: string;
   color: string;
   skills: string[];
 }
 
 const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    label: "Frontend",
+    labelKey: "frontend",
     color: "bg-violet-500/10 text-violet-500",
     skills: [
       "React",
@@ -39,7 +39,7 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    label: "Backend",
+    labelKey: "backend",
     color: "bg-sky-500/10 text-sky-500",
     skills: [
       "Node.js",
@@ -53,7 +53,7 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    label: "Databases & Storage",
+    labelKey: "databases",
     color: "bg-amber-500/10 text-amber-500",
     skills: [
       "PostgreSQL",
@@ -65,7 +65,7 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    label: "DevOps & Tools",
+    labelKey: "devops",
     color: "bg-emerald-500/10 text-emerald-500",
     skills: [
       "Git",
@@ -94,13 +94,13 @@ export function Skills() {
         >
           <motion.p
             variants={fadeUp}
-            className="font-mono text-xs text-(--color-primary) uppercase tracking-widest text-center mb-3"
+            className="font-mono text-xs text-primary uppercase tracking-widest text-center mb-3"
           >
             03
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl font-bold text-center mb-14 text-(--color-foreground)"
+            className="text-3xl sm:text-4xl font-bold text-center mb-14 text-foreground"
           >
             {t("heading")}
           </motion.h2>
@@ -108,20 +108,20 @@ export function Skills() {
           <div className="grid sm:grid-cols-2 gap-6">
             {SKILL_CATEGORIES.map((category) => (
               <motion.div
-                key={category.label}
+                key={category.labelKey}
                 variants={fadeUp}
-                className="rounded-2xl border border-(--color-border) bg-(--color-card) p-6 hover:border-(--color-primary)/40 transition-colors"
+                className="rounded-2xl border border-border bg-card p-6 hover:border-primary/40 transition-colors"
               >
                 <span
                   className={`inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4 ${category.color}`}
                 >
-                  {category.label}
+                  {t(category.labelKey)}
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="text-sm px-3 py-1 rounded-full bg-(--color-muted) text-(--color-foreground) border border-(--color-border) hover:border-(--color-primary)/40 transition-colors"
+                      className="text-sm px-3 py-1 rounded-full bg-muted text-foreground border border-border hover:border-primary/40 transition-colors"
                     >
                       {skill}
                     </span>

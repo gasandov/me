@@ -26,15 +26,45 @@
     "status": "Abierto a nuevas oportunidades"
   },
   "experience": {
-    "heading": "Experiencia"
+    "heading": "Experiencia",
+    "present": "Presente",
+    "wizeline": {
+      "role": "Ingeniero de Software Senior",
+      "location": "Guadalajara, MX (Remoto)",
+      "bullet_0": "Diseñé una tubería de datos en tiempo real que procesa más de 2M de eventos/día para un cliente fintech de EE. UU., reduciendo la latencia en un 70%.",
+      "bullet_1": "Lideré un equipo de 5 ingenieros, impulsando la adopción de TypeScript y estableciendo estándares de revisión de código.",
+      "bullet_2": "Diseñé y entregué una arquitectura de micro-frontend con Module Federation, reduciendo el tiempo por funcionalidad en un 35%.",
+      "bullet_3": "Impulsé mejoras de observabilidad (OpenTelemetry + Datadog), reduciendo el tiempo medio de recuperación de 45 min a 8 min."
+    },
+    "softtek": {
+      "role": "Desarrollador Full-Stack",
+      "location": "Ciudad de México, MX",
+      "bullet_0": "Desarrollé y mantuve 4 aplicaciones web para clientes en los sectores retail y salud.",
+      "bullet_1": "Integré las pasarelas de pago Stripe y Conekta, habilitando $500K/mes en transacciones.",
+      "bullet_2": "Reestructuré los pipelines de CI/CD con GitHub Actions, reduciendo los tiempos de despliegue de 30 min a menos de 7 min.",
+      "bullet_3": "Ejecuté una migración de CMS headless (Contentful) que mejoró la experiencia del editor y la velocidad de contenido."
+    },
+    "freelance": {
+      "role": "Desarrollador Web Junior",
+      "location": "Ciudad de México, MX",
+      "bullet_0": "Desarrollé sitios web responsivos y pequeñas SPAs para más de 10 negocios locales y startups.",
+      "bullet_1": "Construí una solución de e-commerce personalizada con un panel de inventario en tiempo real para un minorista local.",
+      "bullet_2": "Trabajé directamente con clientes para recopilar requisitos, iterar en diseños y entregar a tiempo."
+    }
   },
   "skills": {
-    "heading": "Habilidades"
+    "heading": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de Datos & Almacenamiento",
+    "devops": "DevOps & Herramientas"
   },
   "projects": {
     "heading": "Proyectos",
     "viewCode": "Ver Código",
-    "viewDemo": "Demo en Vivo"
+    "viewDemo": "Demo en Vivo",
+    "featured": "Destacado",
+    "me_description": "Mi portafolio personal y blog. Construido con Next.js App Router, next-intl para soporte multilingüe (EN/ES), Tailwind CSS v4 y animaciones con framer-motion. Incluye modo oscuro, blog MDX, imágenes OG dinámicas y feed RSS."
   },
   "contact": {
     "heading": "Contacto",

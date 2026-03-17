@@ -32,53 +32,53 @@ export function About() {
         >
           <motion.p
             variants={fadeUp}
-            className="font-mono text-xs text-(--color-primary) uppercase tracking-widest text-center mb-3"
+            className="font-mono text-xs text-primary uppercase tracking-widest text-center mb-3"
           >
             01
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl font-bold text-center mb-14 text-(--color-foreground)"
+            className="text-3xl sm:text-4xl font-bold text-center mb-14 text-foreground"
           >
             {t("heading")}
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div variants={fadeUp} className="space-y-4">
-              <p className="text-(--color-foreground) text-base sm:text-lg leading-relaxed">
+              <p className="text-foreground text-base sm:text-lg leading-relaxed">
                 {t("bio")}
               </p>
-              <p className="text-(--color-muted-foreground) text-base leading-relaxed">
-                When I&apos;m not coding, you&apos;ll find me exploring Mexico
+              <p className="text-muted-foreground text-base leading-relaxed">
+                When I&apos;m not coding, you&apos;ll find me exploring Merida
                 City&apos;s food scene, tinkering with side projects, or reading
                 about distributed systems and software architecture.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex flex-col gap-4">
-              <div className="flex items-center gap-3 p-4 rounded-2xl bg-(--color-card) border border-(--color-border)">
+              <div className="flex items-center gap-3 p-4 rounded-2xl bg-card border border-border">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                  <MapPinIcon className="w-5 h-5 text-(--color-primary)" />
+                  <MapPinIcon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-(--color-muted-foreground) uppercase tracking-wider mb-0.5">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
                     Location
                   </p>
-                  <p className="text-sm font-medium text-(--color-foreground)">
+                  <p className="text-sm font-medium text-foreground">
                     {t("location")}
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 rounded-2xl bg-(--color-card) border border-(--color-border)">
+              <div className="flex items-center gap-3 p-4 rounded-2xl bg-card border border-border">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10">
                   <BriefcaseIcon className="w-5 h-5 text-emerald-500" />
                 </div>
                 <div>
-                  <p className="text-xs text-(--color-muted-foreground) uppercase tracking-wider mb-0.5">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
                     Status
                   </p>
-                  <p className="text-sm font-medium text-(--color-foreground)">
+                  <p className="text-sm font-medium text-foreground">
                     {t("status")}
                   </p>
                 </div>
@@ -92,12 +92,12 @@ export function About() {
                 ].map(({ value, label }) => (
                   <div
                     key={label}
-                    className="flex flex-col items-center justify-center p-3 rounded-2xl bg-(--color-muted) text-center"
+                    className="flex flex-col items-center justify-center p-3 rounded-2xl bg-muted text-center"
                   >
-                    <span className="text-2xl font-bold text-(--color-primary)">
+                    <span className="text-2xl font-bold text-primary">
                       {value}
                     </span>
-                    <span className="text-xs text-(--color-muted-foreground) mt-1 whitespace-pre-line leading-tight">
+                    <span className="text-xs text-muted-foreground mt-1 whitespace-pre-line leading-tight">
                       {label}
                     </span>
                   </div>

@@ -56,10 +56,10 @@ export default async function BlogPage({
     <div className="min-h-screen pt-24 pb-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-(--color-foreground) mb-3">
+          <h1 className="text-4xl font-bold text-foreground mb-3">
             {t("heading")}
           </h1>
-          <p className="text-(--color-muted-foreground)">
+          <p className="text-muted-foreground">
             {posts.length} {posts.length === 1 ? "post" : "posts"}
           </p>
         </div>
