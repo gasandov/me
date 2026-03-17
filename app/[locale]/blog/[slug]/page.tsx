@@ -23,7 +23,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = getPost(slug);
+  const post = getPost(slug, locale);
   if (!post) return {};
 
   const tHero = await getTranslations({ locale, namespace: "hero" });
@@ -71,7 +71,7 @@ export default async function BlogPostPage({
   const { locale, slug } = await params;
   setRequestLocale(locale as Locale);
 
-  const post = getPost(slug);
+  const post = getPost(slug, locale);
   if (!post) notFound();
 
   const t = await getTranslations({ locale, namespace: "blog" });
@@ -87,7 +87,7 @@ export default async function BlogPostPage({
         {/* Back link */}
         <Link
           href="/blog"
-          className="inline-flex items-center gap-1.5 text-sm text-(--color-muted-foreground) hover:text-(--color-primary) transition-colors mb-10"
+          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-10"
         >
           <ArrowLeftIcon className="w-3.5 h-3.5" />
           {t("backToBlog")}
@@ -99,7 +99,7 @@ export default async function BlogPostPage({
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-(--color-primary)"
+                className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary"
               >
                 <TagIcon className="w-3 h-3" />
                 {tag}
@@ -107,15 +107,15 @@ export default async function BlogPostPage({
             ))}
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-(--color-foreground) leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight mb-4">
             {post.title}
           </h1>
 
-          <p className="text-lg text-(--color-muted-foreground) leading-relaxed mb-6">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             {post.description}
           </p>
 
-          <div className="flex items-center gap-4 text-sm text-(--color-muted-foreground) border-t border-(--color-border) pt-4">
+          <div className="flex items-center gap-4 text-sm text-muted-foreground border-t border-border pt-4">
             <time dateTime={post.date}>{formattedDate}</time>
             <span aria-hidden>·</span>
             <span className="flex items-center gap-1">
@@ -126,7 +126,7 @@ export default async function BlogPostPage({
         </header>
 
         {/* MDX Content */}
-        <article className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:text-(--color-foreground) prose-p:text-(--color-foreground)/90 prose-p:leading-relaxed prose-a:text-(--color-primary) prose-a:no-underline hover:prose-a:underline prose-code:text-(--color-primary) prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-(--color-muted) prose-pre:border prose-pre:border-(--color-border) prose-blockquote:border-l-4 prose-blockquote:border-(--color-primary) prose-blockquote:pl-4 prose-blockquote:italic prose-img:rounded-xl prose-li:text-(--color-foreground)/90">
+        <article className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-foreground/90 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-img:rounded-xl prose-li:text-foreground/90">
           <MDXRemote source={post.content} />
         </article>
 

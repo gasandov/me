@@ -69,7 +69,7 @@ export function GiscusComments({ slug }: GiscusCommentsProps) {
   return (
     <div
       ref={containerRef}
-      className="mt-12 pt-8 border-t border-(--color-border)"
+      className="mt-12 pt-8 border-t border-border"
     />
   );
 }

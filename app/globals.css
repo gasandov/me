@@ -8,7 +8,9 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
 
+@theme {
   /* Brand palette */
   --color-primary: oklch(55% 0.2 260);
   --color-primary-foreground: oklch(98% 0 0);
@@ -50,6 +52,14 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-scrolled {
+  background-color: color-mix(
+    in oklch,
+    var(--color-background) 90%,
+    transparent
+  );
 }
 
 /* Focus-visible ring utility */
