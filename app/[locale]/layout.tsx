@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
@@ -11,6 +12,17 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Nav } from "@/components/Nav";
 import { routing, type Locale } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import "../globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gasandov.dev";
 
@@ -26,7 +38,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "hero" });
 
-  const alternates = Object.fromEntries(
+  const languages = Object.fromEntries(
     routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}`]),
   );
 
@@ -38,7 +50,10 @@ export async function generateMetadata({
     description: t("tagline"),
     alternates: {
       canonical: `${SITE_URL}/${locale}`,
-      languages: alternates,
+      languages: {
+        ...languages,
+        "x-default": `${SITE_URL}/${routing.defaultLocale}`,
+      },
     },
     openGraph: {
       type: "website",
@@ -67,7 +82,12 @@ const jsonLd = {
   name: "Germán Sandoval",
   url: SITE_URL,
   jobTitle: "Full-Stack Software Engineer",
-  sameAs: ["https://github.com/gasandov", "https://linkedin.com/in/gasandov"],
+  description:
+    "Full-stack software engineer building scalable web applications with clean code and thoughtful UX.",
+  sameAs: [
+    "https://github.com/gasandov",
+    "https://linkedin.com/in/gasandov",
+  ],
 };
 
 export default async function LocaleLayout({
@@ -88,24 +108,30 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <NextIntlClientProvider messages={messages}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Nav />
-          <main>{children}</main>
-          <Analytics />
-          <SpeedInsights />
-        </ThemeProvider>
-      </NextIntlClientProvider>
-    </>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Nav />
+            <main>{children}</main>
+            <Analytics />
+            <SpeedInsights />
+          </ThemeProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

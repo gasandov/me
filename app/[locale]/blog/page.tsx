@@ -24,9 +24,12 @@ export async function generateMetadata({
     description: t("heading"),
     alternates: {
       canonical: `${SITE_URL}/${locale}/blog`,
-      languages: Object.fromEntries(
-        routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}/blog`]),
-      ),
+      languages: {
+        ...Object.fromEntries(
+          routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}/blog`]),
+        ),
+        "x-default": `${SITE_URL}/${routing.defaultLocale}/blog`,
+      },
     },
     openGraph: {
       type: "website",
