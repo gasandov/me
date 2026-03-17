@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "blog": "Blog",
+    "photos": "Photos",
+    "toggleTheme": "Toggle theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Gustavo Sandoval",
+    "title": "Full-Stack Software Engineer",
+    "tagline": "I build scalable web applications with clean code and thoughtful UX.",
+    "cta_resume": "View Resume",
+    "cta_contact": "Get in Touch"
+  },
+  "about": {
+    "heading": "About Me",
+    "bio": "I'm a passionate software engineer with experience building modern web applications. I love clean architecture, great developer experience, and shipping products people enjoy.",
+    "location": "Based in Mexico City",
+    "status": "Open to new opportunities"
+  },
+  "experience": {
+    "heading": "Experience"
+  },
+  "skills": {
+    "heading": "Skills"
+  },
+  "projects": {
+    "heading": "Projects",
+    "viewCode": "View Code",
+    "viewDemo": "Live Demo"
+  },
+  "contact": {
+    "heading": "Contact",
+    "description": "Have a project in mind or just want to chat? I'd love to hear from you.",
+    "email": "Email me",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "blog": {
+    "heading": "Blog",
+    "readMore": "Read more",
+    "readingTime": "{minutes} min read",
+    "searchPlaceholder": "Search posts...",
+    "noResults": "No posts found.",
+    "backToBlog": "Back to Blog"
+  },
+  "photos": {
+    "heading": "Photos",
+    "description": "A collection of moments."
+  },
+  "now": {
+    "heading": "Now",
+    "description": "What I'm currently focused on."
+  },
+  "uses": {
+    "heading": "Uses",
+    "description": "My hardware, editor, and tools setup."
+  },
+  "footer": {
+    "madeWith": "Built with Next.js & Tailwind CSS",
+    "rights": "All rights reserved."
+  }
+}
