@@ -12,8 +12,7 @@ import { Nav } from "@/components/Nav";
 import { routing, type Locale } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://gasandov.dev";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gasandov.dev";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -28,7 +27,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "hero" });
 
   const alternates = Object.fromEntries(
-    routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}`])
+    routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}`]),
   );
 
   return {
@@ -65,13 +64,10 @@ export async function generateMetadata({
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Gustavo Sandoval",
+  name: "Germán Sandoval",
   url: SITE_URL,
   jobTitle: "Full-Stack Software Engineer",
-  sameAs: [
-    "https://github.com/gasandov",
-    "https://linkedin.com/in/gasandov",
-  ],
+  sameAs: ["https://github.com/gasandov", "https://linkedin.com/in/gasandov"],
 };
 
 export default async function LocaleLayout({
