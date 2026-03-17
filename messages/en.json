@@ -53,18 +53,24 @@
   },
   "photos": {
     "heading": "Photos",
-    "description": "A collection of moments."
+    "description": "A collection of moments.",
+    "noPhotos": "No photos yet — check back soon!"
   },
   "now": {
     "heading": "Now",
-    "description": "What I'm currently focused on."
+    "description": "What I'm currently focused on.",
+    "lastUpdated": "Last updated"
   },
   "uses": {
     "heading": "Uses",
-    "description": "My hardware, editor, and tools setup."
+    "description": "My hardware, editor, and tools setup.",
+    "lastUpdated": "Last updated"
   },
   "footer": {
     "madeWith": "Built with Next.js & Tailwind CSS",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "now": "Now",
+    "uses": "Uses",
+    "photos": "Photos"
   }
 }

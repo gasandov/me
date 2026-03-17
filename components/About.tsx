@@ -49,15 +49,15 @@ export function About() {
                 {t("bio")}
               </p>
               <p className="text-(--color-muted-foreground) text-base leading-relaxed">
-                When I'm not coding, you'll find me exploring Mexico City's food
-                scene, tinkering with side projects, or reading about
-                distributed systems and software architecture.
+                When I&apos;m not coding, you&apos;ll find me exploring Mexico
+                City&apos;s food scene, tinkering with side projects, or reading
+                about distributed systems and software architecture.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex flex-col gap-4">
               <div className="flex items-center gap-3 p-4 rounded-2xl bg-(--color-card) border border-(--color-border)">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-(--color-primary)/10">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
                   <MapPinIcon className="w-5 h-5 text-(--color-primary)" />
                 </div>
                 <div>
