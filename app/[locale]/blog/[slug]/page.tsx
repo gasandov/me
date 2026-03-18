@@ -74,7 +74,8 @@ export default async function BlogPostPage({
 
   const t = await getTranslations({ locale, namespace: "blog" });
 
-  const formattedDate = new Date(post.date).toLocaleDateString(
+  const [y, m, d] = post.date.split("-").map(Number);
+  const formattedDate = new Date(y, m - 1, d).toLocaleDateString(
     locale === "de" ? "de-DE" : locale === "es" ? "es-MX" : "en-US",
     { year: "numeric", month: "long", day: "numeric" },
   );
@@ -124,7 +125,7 @@ export default async function BlogPostPage({
         </header>
 
         {/* MDX Content */}
-        <article className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-foreground/90 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-img:rounded-xl prose-li:text-foreground/90">
+        <article className="prose prose-neutral text-justify dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-foreground/90 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-img:rounded-xl prose-li:text-foreground/90">
           <MDXRemote source={post.content} />
         </article>
       </div>
