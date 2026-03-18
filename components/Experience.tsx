@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
+import experienceData from "@/content/experience.json";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -17,41 +18,18 @@ const stagger: Variants = {
   visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
 };
 
-interface ExperienceMeta {
+interface Subproject {
+  key: string;
+}
+
+interface ExperienceItem {
   key: string;
   company: string;
   start: string;
   end: string | null;
   stack: string[];
-  bulletCount: number;
+  subprojects?: Subproject[];
 }
-
-const EXPERIENCE_META: ExperienceMeta[] = [
-  {
-    key: "wizeline",
-    company: "Wizeline",
-    start: "2022",
-    end: null,
-    stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Kafka"],
-    bulletCount: 4,
-  },
-  {
-    key: "softtek",
-    company: "Softtek",
-    start: "2019",
-    end: "2022",
-    stack: ["Next.js", "Express", "MySQL", "Redis", "Docker", "GCP"],
-    bulletCount: 4,
-  },
-  {
-    key: "freelance",
-    company: "Freelance / Early Career",
-    start: "2017",
-    end: "2019",
-    stack: ["React", "JavaScript", "Firebase", "CSS Modules"],
-    bulletCount: 3,
-  },
-];
 
 export function Experience() {
   const t = useTranslations("experience");
@@ -83,62 +61,101 @@ export function Experience() {
             <div className="absolute left-4 top-0 bottom-0 w-px bg-border hidden sm:block" />
 
             <div className="space-y-10">
-              {EXPERIENCE_META.map((meta, i) => (
-                <motion.div
-                  key={i}
-                  variants={fadeUp}
-                  className="sm:pl-14 relative"
-                >
-                  {/* Timeline dot */}
-                  <div className="hidden sm:flex absolute left-0 top-1.5 h-8 w-8 items-center justify-center rounded-full bg-card border-2 border-primary shadow-sm">
-                    <div className="h-2.5 w-2.5 rounded-full bg-primary" />
-                  </div>
+              {(experienceData.items as ExperienceItem[]).map((item, i) => {
+                const bullets = t.raw(`${item.key}.bullets`) as string[];
+                const subprojectTranslations = item.subprojects
+                  ? (
+                      t.raw(`${item.key}.subprojects`) as Record<
+                        string,
+                        { name: string; description: string }
+                      >
+                    )
+                  : null;
 
-                  <div className="rounded-2xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-                      <div>
-                        <h3 className="text-base font-semibold text-foreground">
-                          {t(`${meta.key}.role`)}
-                        </h3>
-                        <p className="text-sm font-medium text-primary">
-                          {meta.company}
-                        </p>
-                      </div>
-                      <div className="flex flex-col sm:items-end gap-0.5 shrink-0">
-                        <span className="text-xs font-medium text-muted-foreground bg-muted px-2.5 py-0.5 rounded-full whitespace-nowrap">
-                          {meta.start} – {meta.end ?? t("present")}
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                          {t(`${meta.key}.location`)}
-                        </span>
-                      </div>
+                return (
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
+                    className="sm:pl-14 relative"
+                  >
+                    {/* Timeline dot */}
+                    <div className="hidden sm:flex absolute left-0 top-1.5 h-8 w-8 items-center justify-center rounded-full bg-card border-2 border-primary shadow-sm">
+                      <div className="h-2.5 w-2.5 rounded-full bg-primary" />
                     </div>
 
-                    <ul className="space-y-1.5 mb-4">
-                      {Array.from({ length: meta.bulletCount }, (_, j) => (
-                        <li
-                          key={j}
-                          className="flex gap-2 text-sm text-muted-foreground leading-relaxed"
-                        >
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
-                          {t(`${meta.key}.bullet_${j}`)}
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="rounded-2xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                        <div>
+                          <h3 className="text-base font-semibold text-foreground">
+                            {t(`${item.key}.role`)}
+                          </h3>
+                          <p className="text-sm font-medium text-primary">
+                            {item.company}
+                          </p>
+                        </div>
+                        <div className="flex flex-col sm:items-end gap-0.5 shrink-0">
+                          <span className="text-xs font-medium text-muted-foreground bg-muted px-2.5 py-0.5 rounded-full whitespace-nowrap">
+                            {item.start} – {item.end ?? t("present")}
+                          </span>
+                          <span className="text-xs text-muted-foreground">
+                            {t(`${item.key}.location`)}
+                          </span>
+                        </div>
+                      </div>
 
-                    <div className="flex flex-wrap gap-1.5">
-                      {meta.stack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="text-xs px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      <ul className="space-y-1.5 mb-4">
+                        {bullets.map((bullet, j) => (
+                          <li
+                            key={j}
+                            className="flex gap-2 text-sm text-muted-foreground leading-relaxed"
+                          >
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
+                            {bullet}
+                          </li>
+                        ))}
+                      </ul>
+
+                      {item.subprojects && subprojectTranslations && (
+                        <div className="mb-4 space-y-2">
+                          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                            Projects
+                          </p>
+                          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                            {item.subprojects.map((sp) => {
+                              const spT = subprojectTranslations[sp.key];
+                              if (!spT) return null;
+                              return (
+                                <div
+                                  key={sp.key}
+                                  className="rounded-lg border border-border bg-muted/40 px-3 py-2.5"
+                                >
+                                  <p className="text-xs font-semibold text-foreground mb-0.5">
+                                    {spT.name}
+                                  </p>
+                                  <p className="text-xs text-muted-foreground leading-relaxed">
+                                    {spT.description}
+                                  </p>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="flex flex-wrap gap-1.5">
+                        {item.stack.map((tech) => (
+                          <span
+                            key={tech}
+                            className="text-xs px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-medium"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </motion.div>

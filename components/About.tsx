@@ -18,8 +18,11 @@ const stagger: Variants = {
   visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
 };
 
+type LanguageEntry = { name: string; level: string };
+
 export function About() {
   const t = useTranslations("about");
+  const languages = t.raw("languages.list") as LanguageEntry[];
 
   return (
     <section id="about" className="py-24 px-4">
@@ -49,9 +52,7 @@ export function About() {
                 {t("bio")}
               </p>
               <p className="text-muted-foreground text-base leading-relaxed">
-                When I&apos;m not coding, you&apos;ll find me exploring Merida
-                City&apos;s food scene, tinkering with side projects, or reading
-                about distributed systems and software architecture.
+                {t("bio2")}
               </p>
             </motion.div>
 
@@ -62,7 +63,7 @@ export function About() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
-                    Location
+                    {t("locationLabel")}
                   </p>
                   <p className="text-sm font-medium text-foreground">
                     {t("location")}
@@ -76,7 +77,7 @@ export function About() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
-                    Status
+                    {t("statusLabel")}
                   </p>
                   <p className="text-sm font-medium text-foreground">
                     {t("status")}
@@ -84,11 +85,10 @@ export function About() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 mt-2">
+              <div className="grid grid-cols-2 gap-3 mt-2">
                 {[
-                  { value: "6+", label: "Years of\nexperience" },
-                  { value: "30+", label: "Projects\ndelivered" },
-                  { value: "3", label: "Languages\nspoken" },
+                  { value: "8+", label: t("stats.yearsExp") },
+                  { value: "10+", label: t("stats.projects") },
                 ].map(({ value, label }) => (
                   <div
                     key={label}
@@ -102,6 +102,27 @@ export function About() {
                     </span>
                   </div>
                 ))}
+              </div>
+
+              <div className="p-4 rounded-2xl bg-muted">
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">
+                  {t("languages.label")}
+                </p>
+                <div className="flex flex-col gap-2">
+                  {languages.map(({ name, level }) => (
+                    <div
+                      key={name}
+                      className="flex items-center justify-between"
+                    >
+                      <span className="text-sm font-medium text-foreground">
+                        {name}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {level}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>

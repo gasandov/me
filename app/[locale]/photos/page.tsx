@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 import { routing, type Locale } from "@/i18n/routing";
 import { getAllPhotos } from "@/lib/photos";
 import { PhotoGrid } from "@/components/PhotoGrid";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gasandov.dev";
+import { SITE_URL } from "@/lib/config";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

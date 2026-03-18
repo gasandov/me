@@ -12,6 +12,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Nav } from "@/components/Nav";
 import { routing, type Locale } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import { SITE_URL } from "@/lib/config";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -23,8 +24,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gasandov.dev";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -84,10 +83,7 @@ const jsonLd = {
   jobTitle: "Full-Stack Software Engineer",
   description:
     "Full-stack software engineer building scalable web applications with clean code and thoughtful UX.",
-  sameAs: [
-    "https://github.com/gasandov",
-    "https://linkedin.com/in/gasandov",
-  ],
+  sameAs: ["https://github.com/gasandov", "https://linkedin.com/in/gasandov"],
 };
 
 export default async function LocaleLayout({

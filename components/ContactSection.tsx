@@ -110,7 +110,7 @@ export function ContactSection() {
             variants={fadeUp}
             className="text-sm text-muted-foreground"
           >
-            You can also reach me at{" "}
+            {t("reachMe")}{" "}
             <a
               href="mailto:german.sandoval.i@gmail.com"
               className="text-primary hover:underline underline-offset-4"

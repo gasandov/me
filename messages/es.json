@@ -22,8 +22,23 @@
   "about": {
     "heading": "Sobre mí",
     "bio": "Soy un ingeniero de software apasionado con experiencia en el desarrollo de aplicaciones web modernas. Me encanta la arquitectura limpia, la excelente experiencia del desarrollador y lanzar productos que la gente disfruta.",
-    "location": "Con base en Ciudad de México",
-    "status": "Abierto a nuevas oportunidades"
+    "bio2": "Cuando no estoy programando, me encontrarás explorando la escena gastronómica de Mérida, trabajando en proyectos personales, o leyendo sobre sistemas distribuidos y arquitectura de software.",
+    "location": "Con base en Mérida, MX",
+    "locationLabel": "Ubicación",
+    "status": "Abierto a nuevas oportunidades",
+    "statusLabel": "Estado",
+    "stats": {
+      "yearsExp": "Años de\nexperiencia",
+      "projects": "Proyectos\nentregados"
+    },
+    "languages": {
+      "label": "Idiomas",
+      "list": [
+        { "name": "Español", "level": "Nativo" },
+        { "name": "Inglés", "level": "Fluido" },
+        { "name": "Japonés", "level": "Aprendiendo" }
+      ]
+    }
   },
   "experience": {
     "heading": "Experiencia",
@@ -31,25 +46,44 @@
     "wizeline": {
       "role": "Ingeniero de Software Senior",
       "location": "Guadalajara, MX (Remoto)",
-      "bullet_0": "Diseñé una tubería de datos en tiempo real que procesa más de 2M de eventos/día para un cliente fintech de EE. UU., reduciendo la latencia en un 70%.",
-      "bullet_1": "Lideré un equipo de 5 ingenieros, impulsando la adopción de TypeScript y estableciendo estándares de revisión de código.",
-      "bullet_2": "Diseñé y entregué una arquitectura de micro-frontend con Module Federation, reduciendo el tiempo por funcionalidad en un 35%.",
-      "bullet_3": "Impulsé mejoras de observabilidad (OpenTelemetry + Datadog), reduciendo el tiempo medio de recuperación de 45 min a 8 min."
+      "bullets": [
+        "Diseñé una tubería de datos en tiempo real que procesa más de 2M de eventos/día para un cliente fintech de EE. UU., reduciendo la latencia en un 70%.",
+        "Lideré un equipo de 5 ingenieros, impulsando la adopción de TypeScript y estableciendo estándares de revisión de código.",
+        "Diseñé y entregué una arquitectura de micro-frontend con Module Federation, reduciendo el tiempo por funcionalidad en un 35%.",
+        "Impulsé mejoras de observabilidad (OpenTelemetry + Datadog), reduciendo el tiempo medio de recuperación de 45 min a 8 min."
+      ]
     },
     "softtek": {
       "role": "Desarrollador Full-Stack",
       "location": "Ciudad de México, MX",
-      "bullet_0": "Desarrollé y mantuve 4 aplicaciones web para clientes en los sectores retail y salud.",
-      "bullet_1": "Integré las pasarelas de pago Stripe y Conekta, habilitando $500K/mes en transacciones.",
-      "bullet_2": "Reestructuré los pipelines de CI/CD con GitHub Actions, reduciendo los tiempos de despliegue de 30 min a menos de 7 min.",
-      "bullet_3": "Ejecuté una migración de CMS headless (Contentful) que mejoró la experiencia del editor y la velocidad de contenido."
+      "bullets": [
+        "Desarrollé y mantuve 4 aplicaciones web para clientes en los sectores retail y salud.",
+        "Integré las pasarelas de pago Stripe y Conekta, habilitando $500K/mes en transacciones.",
+        "Reestructuré los pipelines de CI/CD con GitHub Actions, reduciendo los tiempos de despliegue de 30 min a menos de 7 min.",
+        "Ejecuté una migración de CMS headless (Contentful) que mejoró la experiencia del editor y la velocidad de contenido."
+      ]
     },
     "freelance": {
       "role": "Desarrollador Web Junior",
-      "location": "Ciudad de México, MX",
-      "bullet_0": "Desarrollé sitios web responsivos y pequeñas SPAs para más de 10 negocios locales y startups.",
-      "bullet_1": "Construí una solución de e-commerce personalizada con un panel de inventario en tiempo real para un minorista local.",
-      "bullet_2": "Trabajé directamente con clientes para recopilar requisitos, iterar en diseños y entregar a tiempo."
+      "location": "Mérida, MX",
+      "bullets": [
+        "Desarrollé sitios web responsivos y pequeñas SPAs para más de 10 negocios locales y startups.",
+        "Trabajé directamente con clientes para recopilar requisitos, iterar en diseños y entregar a tiempo."
+      ],
+      "subprojects": {
+        "ecommerce": {
+          "name": "Plataforma de E-commerce",
+          "description": "Tienda personalizada con panel de inventario en tiempo real para un minorista local, con integración de pagos y gestión de pedidos."
+        },
+        "retailDashboard": {
+          "name": "Panel de Análisis Retail",
+          "description": "Dashboard interno para rastrear ventas, niveles de stock y tendencias de clientes — construido con React y Firebase."
+        },
+        "websites": {
+          "name": "Sitios Web y SPAs para Clientes",
+          "description": "Sitios web responsivos y aplicaciones de una sola página para más de 10 negocios locales, desde sitios informativos hasta flujos de reserva."
+        }
+      }
     }
   },
   "skills": {
@@ -71,7 +105,8 @@
     "description": "¿Tienes un proyecto en mente o simplemente quieres conversar? Me encantaría saber de ti.",
     "email": "Envíame un correo",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "reachMe": "También puedes escribirme a"
   },
   "blog": {
     "heading": "Blog",
