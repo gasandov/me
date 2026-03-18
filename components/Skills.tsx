@@ -31,11 +31,13 @@ const SKILL_CATEGORIES: SkillCategory[] = [
       "React",
       "Next.js",
       "TypeScript",
-      "Tailwind CSS",
+      "Tailwind",
       "Framer Motion",
       "Redux",
       "React Query",
       "HTML / CSS",
+      "Jest",
+      "Cypress",
     ],
   },
   {
@@ -44,7 +46,6 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       "Node.js",
       "Express",
-      "Fastify",
       "Python",
       "REST APIs",
       "GraphQL",
@@ -55,28 +56,12 @@ const SKILL_CATEGORIES: SkillCategory[] = [
   {
     labelKey: "databases",
     color: "bg-amber-500/10 text-amber-500",
-    skills: [
-      "PostgreSQL",
-      "MySQL",
-      "Redis",
-      "MongoDB",
-      "Prisma",
-      "Drizzle ORM",
-    ],
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Supabase", "Prisma"],
   },
   {
     labelKey: "devops",
     color: "bg-emerald-500/10 text-emerald-500",
-    skills: [
-      "Git",
-      "Docker",
-      "GitHub Actions",
-      "AWS",
-      "GCP",
-      "Vercel",
-      "Linux",
-      "Kafka",
-    ],
+    skills: ["Git", "Docker", "GitHub Actions", "AWS", "GCP", "Vercel"],
   },
 ];
 

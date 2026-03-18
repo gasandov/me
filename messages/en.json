@@ -22,7 +22,7 @@
   "about": {
     "heading": "About Me",
     "bio": "I'm a passionate software engineer with experience building modern web applications. I love clean architecture, great developer experience, and shipping products people enjoy.",
-    "bio2": "When I'm not coding, you'll find me exploring Merida City's food scene, tinkering with side projects, or reading about distributed systems and software architecture.",
+    "bio2": "When I'm not coding, you'll find me exploring learning languages with Duolingo, watching series, reading books, taking photos or experimenting with side projects.",
     "location": "Based in Merida, MX",
     "locationLabel": "Location",
     "status": "Open to new opportunities and relocation",
@@ -36,54 +36,89 @@
       "list": [
         { "name": "Spanish", "level": "Native" },
         { "name": "English", "level": "Fluent" },
-        { "name": "Japanese", "level": "Learning" }
+        { "name": "Japanese", "level": "Learning" },
+        { "name": "Italian", "level": "Learning" }
       ]
     }
   },
   "experience": {
     "heading": "Experience",
     "present": "Present",
+    "freelance": {
+      "role": "Senior Software Engineer",
+      "location": "MX (Remote)",
+      "bullets": [
+        "Supported projects like ARC XP, Condé Nast and Leviti, delivering engineering solutions that sped up feature rollout by 25% and reduced bugs by 30%, enhancing product quality and delivery.",
+        "Provided support for Oracle by fixing bugs and maintaining PL/SQL queries."
+      ],
+      "subprojects": {
+        "brightwell": {
+          "name": "Brightwell",
+          "description": "Built an SDK for Brightwell from scratch, delivering ahead of tight deadlines and leading technology selection to align with project requirements."
+        },
+        "tono": {
+          "name": "TonoHealth",
+          "description": "Built a comprehensive dermatology application for TonoHealth with live chat, video consultations, and integrated e-commerce features."
+        }
+      }
+    },
+    "kunai": {
+      "role": "Full Stack Engineer (FE Focus)",
+      "location": "Guadalajara, MX (Remote)",
+      "bullets": [
+        "Crafted new visual experiences for AtlasSP customers, increasing engagement, and architected server-side logic that reduced API latency and errors, enabling seamless functionality"
+      ]
+    },
     "wizeline": {
       "role": "Senior Software Engineer",
       "location": "Guadalajara, MX (Remote)",
-      "bullets": [
-        "Architected a real-time data pipeline processing 2M+ events/day for a US fintech client, reducing latency by 70%.",
-        "Led a squad of 5 engineers, driving TypeScript adoption and establishing team code-review standards.",
-        "Designed and shipped a micro-frontend architecture with Module Federation, cutting time-to-feature by 35%.",
-        "Championed observability improvements (OpenTelemetry + Datadog), reducing mean time to recovery from 45 min to 8 min."
-      ]
-    },
-    "softtek": {
-      "role": "Full-Stack Developer",
-      "location": "Merida, MX",
-      "bullets": [
-        "Built and maintained 4 client-facing web applications across retail and healthcare verticals.",
-        "Integrated Stripe and Conekta payment gateways, enabling $500K/month in transactions.",
-        "Revamped CI/CD pipelines with GitHub Actions, reducing deploy times from 30 min to under 7 min.",
-        "Delivered a headless CMS migration (Contentful) that improved editor experience and content velocity."
-      ]
-    },
-    "freelance": {
-      "role": "Junior Web Developer",
-      "location": "Merida, MX",
-      "bullets": [
-        "Developed responsive websites and small SPAs for 10+ local businesses and startups.",
-        "Worked directly with clients to gather requirements, iterate on designs, and deliver on time."
-      ],
+      "bullets": [],
       "subprojects": {
-        "ecommerce": {
-          "name": "E-commerce Platform",
-          "description": "Custom storefront with real-time inventory dashboard for a local retailer, integrating payment processing and order management."
+        "boattrader": {
+          "name": "BoatTrader",
+          "description": "Spearheaded new functionalities and SEO optimizations for BoatTrader, raising Lighthouse score from 60 to 90 points and increasing site visibility, resulting in a 15% increase in organic traffic."
         },
-        "retailDashboard": {
-          "name": "Retail Analytics Dashboard",
-          "description": "Internal dashboard for tracking sales, stock levels, and customer trends — built with React and Firebase."
+        "synchrony": {
+          "name": "Synchrony",
+          "description": "Achieved a remarkable SEO boost at Synchrony, elevating Lighthouse's score from 60 to 90."
         },
-        "websites": {
-          "name": "Client Websites & SPAs",
-          "description": "Responsive websites and single-page apps for 10+ local businesses, from brochure sites to booking flows."
+        "cerby": {
+          "name": "Cerby",
+          "description": "Earned top performer recognition at Cerby and developed refined scraping techniques for optimal efficiency across multiple platforms."
+        },
+        "wizelineos": {
+          "name": "WizelineOS",
+          "description": "Improved WizelineOS internal tool by leading a UI/UX overhaul, optimizing GraphQL queries, and refining code to enhance functionality and user experience."
         }
       }
+    },
+    "luxoft_second_stage": {
+      "role": "Senior Software Engineer",
+      "location": "Guadalajara, MX (Remote)",
+      "bullets": [
+        "Integrated Backstage for Expedia, adapting it to company requirements and enhancing operational efficiency."
+      ]
+    },
+    "clip": {
+      "role": "Full Stack Engineer",
+      "location": "Guadalajara, MX (Remote)",
+      "bullets": [
+        "Collaborated in developing microservices on AWS and RabbitMQ. Proactively addressed potential bottlenecks, ensuring seamless communication and scalability for smooth operations in web and mobile applications."
+      ]
+    },
+    "luxoft": {
+      "role": "Software Engineer",
+      "location": "Guadalajara, MX (Hybrid)",
+      "bullets": [
+        "Developed and enhanced a shared React component library for Expedia, fostering uniformity and improving UI cohesiveness across applications, featuring over 50+ reusable components."
+      ]
+    },
+    "ibm": {
+      "role": "Application Developer",
+      "location": "Guadalajara, MX (On-site)",
+      "bullets": [
+        "Reduced response times from 3 minutes to 30 seconds (~83%) by implementing efficient indexing strategies in the database and optimizing code."
+      ]
     }
   },
   "skills": {
