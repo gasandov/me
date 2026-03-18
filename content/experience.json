@@ -1,30 +1,60 @@
 {
   "items": [
     {
+      "key": "freelance",
+      "company": "Freelance / Consulting",
+      "start": "2019-03",
+      "end": null,
+      "stack": [],
+      "subprojects": [{ "key": "brightwell" }, { "key": "tono" }]
+    },
+    {
+      "key": "kunai",
+      "company": "Kunai",
+      "start": "2024-08",
+      "end": "2025-05",
+      "stack": []
+    },
+    {
       "key": "wizeline",
       "company": "Wizeline",
-      "start": "2022",
-      "end": null,
-      "stack": ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Kafka"]
-    },
-    {
-      "key": "softtek",
-      "company": "Softtek",
-      "start": "2019",
-      "end": "2022",
-      "stack": ["Next.js", "Express", "MySQL", "Redis", "Docker", "GCP"]
-    },
-    {
-      "key": "freelance",
-      "company": "Freelance / Early Career",
-      "start": "2017",
-      "end": "2019",
-      "stack": ["React", "JavaScript", "Firebase", "CSS Modules"],
+      "start": "2022-09",
+      "end": "2024-07",
+      "stack": [],
       "subprojects": [
-        { "key": "ecommerce" },
-        { "key": "retailDashboard" },
-        { "key": "websites" }
+        { "key": "boattrader" },
+        { "key": "synchrony" },
+        { "key": "cerby" },
+        { "key": "wizelineos" }
       ]
+    },
+    {
+      "key": "luxoft_second_stage",
+      "company": "Luxoft",
+      "start": "2021-02",
+      "end": "2021-08",
+      "stack": []
+    },
+    {
+      "key": "clip",
+      "company": "Clip",
+      "start": "2020-06",
+      "end": "2021-02",
+      "stack": []
+    },
+    {
+      "key": "luxoft",
+      "company": "Luxoft",
+      "start": "2019-08",
+      "end": "2020-06",
+      "stack": []
+    },
+    {
+      "key": "ibm",
+      "company": "IBM",
+      "start": "2017-05",
+      "end": "2019-02",
+      "stack": []
     }
   ]
 }

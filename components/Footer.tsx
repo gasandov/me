@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+// import { Link } from "@/i18n/navigation";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -12,7 +12,7 @@ export function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
         <p>{t("madeWith")}</p>
 
-        <nav aria-label="Footer navigation" className="flex items-center gap-4">
+        {/*<nav aria-label="Footer navigation" className="flex items-center gap-4">
           <Link
             href="/photos"
             className="hover:text-foreground transition-colors"
@@ -31,7 +31,7 @@ export function Footer() {
           >
             {t("uses")}
           </Link>
-        </nav>
+        </nav>*/}
 
         <p>
           © {year} Germán Sandoval · {t("rights")}

@@ -84,14 +84,6 @@ export function ContactSection() {
             variants={fadeUp}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
           >
-            <a
-              href="mailto:german.sandoval.i@gmail.com"
-              className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm shadow-lg hover:opacity-90 transition-opacity"
-            >
-              <EnvelopeIcon className="w-4 h-4" />
-              {t("email")}
-            </a>
-
             {SOCIAL_LINKS.map(({ key, href, icon }) => (
               <a
                 key={key}
@@ -106,10 +98,7 @@ export function ContactSection() {
             ))}
           </motion.div>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-sm text-muted-foreground"
-          >
+          <motion.p variants={fadeUp} className="text-sm text-muted-foreground">
             {t("reachMe")}{" "}
             <a
               href="mailto:german.sandoval.i@gmail.com"

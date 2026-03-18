@@ -21,11 +21,11 @@
   },
   "about": {
     "heading": "Sobre mí",
-    "bio": "Soy un ingeniero de software apasionado con experiencia en el desarrollo de aplicaciones web modernas. Me encanta la arquitectura limpia, la excelente experiencia del desarrollador y lanzar productos que la gente disfruta.",
-    "bio2": "Cuando no estoy programando, me encontrarás explorando la escena gastronómica de Mérida, trabajando en proyectos personales, o leyendo sobre sistemas distribuidos y arquitectura de software.",
+    "bio": "Soy un ingeniero de software apasionado con experiencia en el desarrollo de aplicaciones web modernas. Me encanta la arquitectura limpia, la excelente experiencia del desarrollador y trabajar en productos que la gente disfruta.",
+    "bio2": "Cuando no estoy programando, me encontrarás explorando aprendiendo idomas con Duolingo, viendo series, leyendo libros, tomando fotos o experimentando con proyectos personales.",
     "location": "Con base en Mérida, MX",
     "locationLabel": "Ubicación",
-    "status": "Abierto a nuevas oportunidades",
+    "status": "Abierto a nuevas oportunidades y relocación",
     "statusLabel": "Estado",
     "stats": {
       "yearsExp": "Años de\nexperiencia",
@@ -36,54 +36,89 @@
       "list": [
         { "name": "Español", "level": "Nativo" },
         { "name": "Inglés", "level": "Fluido" },
-        { "name": "Japonés", "level": "Aprendiendo" }
+        { "name": "Japonés", "level": "Aprendiendo" },
+        { "name": "Italiano", "level": "Aprendiendo" }
       ]
     }
   },
   "experience": {
     "heading": "Experiencia",
     "present": "Presente",
+    "freelance": {
+      "role": "Ingeniero de Software Senior",
+      "location": "MX (Remoto)",
+      "bullets": [
+        "Di soporte a proyectos para Leviti, Condé Nast y ARC XP, entregando soluciones de ingeniería que aceleraron la implementación de características en un 25% y redujeron los errores en un 30%, mejorando la calidad del producto y la entrega.",
+        "Proporcioné soporte para Oracle al corregir errores y mantener consultas PL/SQL."
+      ],
+      "subprojects": {
+        "brightwell": {
+          "name": "Brightwell",
+          "description": "Construí un SDK para Brightwell desde cero, entregando antes de los plazos ajustados y liderando la selección de tecnologías para alinear con los requisitos del proyecto."
+        },
+        "tono": {
+          "name": "TonoHealth",
+          "description": "Construí una aplicación dermatológica integral para TonoHealth con chat en vivo, consultas en video y características de comercio electrónico integradas."
+        }
+      }
+    },
+    "kunai": {
+      "role": "Ingeniero Full-Stack (Frontend Focus)",
+      "location": "Guadalajara, MX (Remoto)",
+      "bullets": [
+        "Creé nuevas experiencias visuales para clientes de AtlasSP, aumentando la participación y diseñé la lógica del lado del servidor que redujo la latencia de las API y los errores, permitiendo una funcionalidad sin problemas"
+      ]
+    },
     "wizeline": {
       "role": "Ingeniero de Software Senior",
       "location": "Guadalajara, MX (Remoto)",
-      "bullets": [
-        "Diseñé una tubería de datos en tiempo real que procesa más de 2M de eventos/día para un cliente fintech de EE. UU., reduciendo la latencia en un 70%.",
-        "Lideré un equipo de 5 ingenieros, impulsando la adopción de TypeScript y estableciendo estándares de revisión de código.",
-        "Diseñé y entregué una arquitectura de micro-frontend con Module Federation, reduciendo el tiempo por funcionalidad en un 35%.",
-        "Impulsé mejoras de observabilidad (OpenTelemetry + Datadog), reduciendo el tiempo medio de recuperación de 45 min a 8 min."
-      ]
-    },
-    "softtek": {
-      "role": "Desarrollador Full-Stack",
-      "location": "Ciudad de México, MX",
-      "bullets": [
-        "Desarrollé y mantuve 4 aplicaciones web para clientes en los sectores retail y salud.",
-        "Integré las pasarelas de pago Stripe y Conekta, habilitando $500K/mes en transacciones.",
-        "Reestructuré los pipelines de CI/CD con GitHub Actions, reduciendo los tiempos de despliegue de 30 min a menos de 7 min.",
-        "Ejecuté una migración de CMS headless (Contentful) que mejoró la experiencia del editor y la velocidad de contenido."
-      ]
-    },
-    "freelance": {
-      "role": "Desarrollador Web Junior",
-      "location": "Mérida, MX",
-      "bullets": [
-        "Desarrollé sitios web responsivos y pequeñas SPAs para más de 10 negocios locales y startups.",
-        "Trabajé directamente con clientes para recopilar requisitos, iterar en diseños y entregar a tiempo."
-      ],
+      "bullets": [],
       "subprojects": {
-        "ecommerce": {
-          "name": "Plataforma de E-commerce",
-          "description": "Tienda personalizada con panel de inventario en tiempo real para un minorista local, con integración de pagos y gestión de pedidos."
+        "boattrader": {
+          "name": "BoatTrader",
+          "description": "Dirigí el desarrollo de nuevas funcionalidades y optimizaciones de SEO para BoatTrader, elevando el puntaje de Lighthouse de 60 a 90 puntos y aumentando la visibilidad del sitio, resultando en un aumento del 15% en el tráfico orgánico."
         },
-        "retailDashboard": {
-          "name": "Panel de Análisis Retail",
-          "description": "Dashboard interno para rastrear ventas, niveles de stock y tendencias de clientes — construido con React y Firebase."
+        "synchrony": {
+          "name": "Synchrony",
+          "description": "Logré un gran aumento de SEO en Synchrony, elevando el puntaje de Lighthouse de 60 a 90 puntos."
         },
-        "websites": {
-          "name": "Sitios Web y SPAs para Clientes",
-          "description": "Sitios web responsivos y aplicaciones de una sola página para más de 10 negocios locales, desde sitios informativos hasta flujos de reserva."
+        "cerby": {
+          "name": "Cerby",
+          "description": "Gané reconocimiento como top performer en Cerby y desarrollé técnicas de scraping refinadas para una eficiencia óptima en múltiples plataformas."
+        },
+        "wizelineos": {
+          "name": "WizelineOS",
+          "description": "Mejoré la herramienta interna de WizelineOS liderando un rediseño de UI/UX, optimizando consultas GraphQL y refinando el código para mejorar la funcionalidad y la experiencia del usuario."
         }
       }
+    },
+    "luxoft_second_stage": {
+      "role": "Ingeniero de Software Senior",
+      "location": "Guadalajara, MX (Remoto)",
+      "bullets": [
+        "Integré Backstage para Expedia, adaptándolo a los requisitos de la empresa y mejorando la eficiencia operativa."
+      ]
+    },
+    "clip": {
+      "role": "Ingeniero Full-Stack",
+      "location": "Guadalajara, MX (Remoto)",
+      "bullets": [
+        "Colaboré en el desarrollo de microservicios en AWS y RabbitMQ. Abordé potenciales cuellos de botella de manera proactiva, asegurando la comunicación y la escalabilidad en las aplicaciones web y móviles."
+      ]
+    },
+    "luxoft": {
+      "role": "Ingeniero de Software",
+      "location": "Guadalajara, MX (Híbrido)",
+      "bullets": [
+        "Desarrollé y mejoré una biblioteca de componentes React compartida para Expedia, fomentando uniformidad y mejorando la cohesión de la interfaz de usuario en las aplicaciones, con más de 50 componentes reutilizables."
+      ]
+    },
+    "ibm": {
+      "role": "Desarrollador de Aplicaciones",
+      "location": "Guadalajara, MX (On-site)",
+      "bullets": [
+        "Reduje el tiempo de respuesta de 3 minutos a 30 segundos (~83%) implementando estrategias de indexación en la base de datos y optimizando el código."
+      ]
     }
   },
   "skills": {

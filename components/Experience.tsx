@@ -1,8 +1,17 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+
 import experienceData from "@/content/experience.json";
+
+function formatMonthYear(dateStr: string, locale: string): string {
+  const date = new Date(`${dateStr}-01`);
+  return new Intl.DateTimeFormat(locale, {
+    month: "short",
+    year: "numeric",
+  }).format(date);
+}
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -33,6 +42,7 @@ interface ExperienceItem {
 
 export function Experience() {
   const t = useTranslations("experience");
+  const locale = useLocale();
 
   return (
     <section id="experience" className="py-24 px-4">
@@ -95,7 +105,10 @@ export function Experience() {
                         </div>
                         <div className="flex flex-col sm:items-end gap-0.5 shrink-0">
                           <span className="text-xs font-medium text-muted-foreground bg-muted px-2.5 py-0.5 rounded-full whitespace-nowrap">
-                            {item.start} – {item.end ?? t("present")}
+                            {formatMonthYear(item.start, locale)} –{" "}
+                            {item.end
+                              ? formatMonthYear(item.end, locale)
+                              : t("present")}
                           </span>
                           <span className="text-xs text-muted-foreground">
                             {t(`${item.key}.location`)}
