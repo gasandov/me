@@ -1,12 +1,10 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { getAllPosts } from "@/lib/blog";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://gasandov.dev";
+import { SITE_URL } from "@/lib/config";
 
 const STATIC_PAGES = [
-  "",       // home
+  "", // home
   "/blog",
   "/photos",
   "/now",
@@ -27,10 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: {
             ...Object.fromEntries(
-              routing.locales.map((loc) => [
-                loc,
-                `${SITE_URL}/${loc}${page}`,
-              ]),
+              routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}${page}`]),
             ),
             "x-default": `${SITE_URL}/${routing.defaultLocale}${page}`,
           },

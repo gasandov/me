@@ -60,6 +60,11 @@ export function Nav() {
   }
 
   const isDark = resolvedTheme === "dark";
+  const isHome = pathname === "/";
+
+  function sectionHref(key: string) {
+    return isHome ? `#${key}` : `/#${key}`;
+  }
 
   return (
     <header
@@ -83,7 +88,7 @@ export function Nav() {
           {NAV_LINKS.map((key) => (
             <li key={key}>
               <a
-                href={`#${key}`}
+                href={sectionHref(key)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors capitalize"
               >
                 {t(key)}
@@ -167,7 +172,7 @@ export function Nav() {
             {NAV_LINKS.map((key) => (
               <li key={key}>
                 <a
-                  href={`#${key}`}
+                  href={sectionHref(key)}
                   onClick={() => setMenuOpen(false)}
                   className="block text-sm text-muted-foreground hover:text-foreground transition-colors capitalize py-1"
                 >

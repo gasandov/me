@@ -6,8 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import matter from "gray-matter";
 import { routing, type Locale } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gasandov.dev";
+import { SITE_URL } from "@/lib/config";
 
 function getNowContent() {
   const filePath = path.join(process.cwd(), "content/now.mdx");

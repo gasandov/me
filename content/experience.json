@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "key": "wizeline",
+      "company": "Wizeline",
+      "start": "2022",
+      "end": null,
+      "stack": ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Kafka"]
+    },
+    {
+      "key": "softtek",
+      "company": "Softtek",
+      "start": "2019",
+      "end": "2022",
+      "stack": ["Next.js", "Express", "MySQL", "Redis", "Docker", "GCP"]
+    },
+    {
+      "key": "freelance",
+      "company": "Freelance / Early Career",
+      "start": "2017",
+      "end": "2019",
+      "stack": ["React", "JavaScript", "Firebase", "CSS Modules"],
+      "subprojects": [
+        { "key": "ecommerce" },
+        { "key": "retailDashboard" },
+        { "key": "websites" }
+      ]
+    }
+  ]
+}

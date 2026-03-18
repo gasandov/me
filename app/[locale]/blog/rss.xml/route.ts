@@ -1,8 +1,7 @@
 import { Feed } from "feed";
 import { routing } from "@/i18n/routing";
 import { getAllPosts } from "@/lib/blog";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gasandov.dev";
+import { SITE_URL } from "@/lib/config";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

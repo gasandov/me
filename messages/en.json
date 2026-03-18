@@ -22,8 +22,23 @@
   "about": {
     "heading": "About Me",
     "bio": "I'm a passionate software engineer with experience building modern web applications. I love clean architecture, great developer experience, and shipping products people enjoy.",
-    "location": "Based in Merida",
-    "status": "Open to new opportunities"
+    "bio2": "When I'm not coding, you'll find me exploring Merida City's food scene, tinkering with side projects, or reading about distributed systems and software architecture.",
+    "location": "Based in Merida, MX",
+    "locationLabel": "Location",
+    "status": "Open to new opportunities and relocation",
+    "statusLabel": "Status",
+    "stats": {
+      "yearsExp": "Years of\nexperience",
+      "projects": "Projects\ndelivered"
+    },
+    "languages": {
+      "label": "Languages",
+      "list": [
+        { "name": "Spanish", "level": "Native" },
+        { "name": "English", "level": "Fluent" },
+        { "name": "Japanese", "level": "Learning" }
+      ]
+    }
   },
   "experience": {
     "heading": "Experience",
@@ -31,25 +46,44 @@
     "wizeline": {
       "role": "Senior Software Engineer",
       "location": "Guadalajara, MX (Remote)",
-      "bullet_0": "Architected a real-time data pipeline processing 2M+ events/day for a US fintech client, reducing latency by 70%.",
-      "bullet_1": "Led a squad of 5 engineers, driving TypeScript adoption and establishing team code-review standards.",
-      "bullet_2": "Designed and shipped a micro-frontend architecture with Module Federation, cutting time-to-feature by 35%.",
-      "bullet_3": "Championed observability improvements (OpenTelemetry + Datadog), reducing mean time to recovery from 45 min to 8 min."
+      "bullets": [
+        "Architected a real-time data pipeline processing 2M+ events/day for a US fintech client, reducing latency by 70%.",
+        "Led a squad of 5 engineers, driving TypeScript adoption and establishing team code-review standards.",
+        "Designed and shipped a micro-frontend architecture with Module Federation, cutting time-to-feature by 35%.",
+        "Championed observability improvements (OpenTelemetry + Datadog), reducing mean time to recovery from 45 min to 8 min."
+      ]
     },
     "softtek": {
       "role": "Full-Stack Developer",
       "location": "Merida, MX",
-      "bullet_0": "Built and maintained 4 client-facing web applications across retail and healthcare verticals.",
-      "bullet_1": "Integrated Stripe and Conekta payment gateways, enabling $500K/month in transactions.",
-      "bullet_2": "Revamped CI/CD pipelines with GitHub Actions, reducing deploy times from 30 min to under 7 min.",
-      "bullet_3": "Delivered a headless CMS migration (Contentful) that improved editor experience and content velocity."
+      "bullets": [
+        "Built and maintained 4 client-facing web applications across retail and healthcare verticals.",
+        "Integrated Stripe and Conekta payment gateways, enabling $500K/month in transactions.",
+        "Revamped CI/CD pipelines with GitHub Actions, reducing deploy times from 30 min to under 7 min.",
+        "Delivered a headless CMS migration (Contentful) that improved editor experience and content velocity."
+      ]
     },
     "freelance": {
       "role": "Junior Web Developer",
       "location": "Merida, MX",
-      "bullet_0": "Developed responsive websites and small SPAs for 10+ local businesses and startups.",
-      "bullet_1": "Built a custom e-commerce solution with a real-time inventory dashboard for a local retailer.",
-      "bullet_2": "Worked directly with clients to gather requirements, iterate on designs, and deliver on time."
+      "bullets": [
+        "Developed responsive websites and small SPAs for 10+ local businesses and startups.",
+        "Worked directly with clients to gather requirements, iterate on designs, and deliver on time."
+      ],
+      "subprojects": {
+        "ecommerce": {
+          "name": "E-commerce Platform",
+          "description": "Custom storefront with real-time inventory dashboard for a local retailer, integrating payment processing and order management."
+        },
+        "retailDashboard": {
+          "name": "Retail Analytics Dashboard",
+          "description": "Internal dashboard for tracking sales, stock levels, and customer trends — built with React and Firebase."
+        },
+        "websites": {
+          "name": "Client Websites & SPAs",
+          "description": "Responsive websites and single-page apps for 10+ local businesses, from brochure sites to booking flows."
+        }
+      }
     }
   },
   "skills": {
@@ -71,7 +105,8 @@
     "description": "Have a project in mind or just want to chat? I'd love to hear from you.",
     "email": "Email me",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "reachMe": "You can also reach me at"
   },
   "blog": {
     "heading": "Blog",
