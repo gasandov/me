@@ -172,5 +172,53 @@
     "now": "Now",
     "uses": "Uses",
     "photos": "Photos"
+  },
+  "cashbackCalculator": {
+    "title": "Calculate your real benefit",
+    "cardLabel": "Card",
+    "cashbackSectionHeading": "Cashback — monthly spending by category (MXN)",
+    "warehouseLabel": "Purchases at Costco Mexico warehouse",
+    "warehouseRateHint": "(effective price savings ~2.3% per month)",
+    "warehouseHelp": "Optional: estimate for in-store purchases in Mexico. Does not count toward the card’s monthly cashback cap. Terms may vary; figure is indicative.",
+    "monthlyCapLabel": "Monthly cap (MXN)",
+    "monthlyCapHelp": "0 = no cap. Applies to total card cashback, not per category.",
+    "annualFeeLabel": "Annual fee excluding VAT (MXN)",
+    "annualFeeHelp": "Net benefit subtracts the fee including VAT ({rate}%).",
+    "monthlyCashbackNoCap": "Monthly cashback (no cap):",
+    "monthlyCashbackWithCap": "Monthly cashback (with cap):",
+    "capApplied": "(cap applied)",
+    "annualCashback": "Annual cashback:",
+    "annualFeeWithVat": "Annual fee with VAT:",
+    "netBenefit": "Net benefit (cashback − annual fee with VAT):",
+    "warehouseAnnualSavings": "Estimated annual effective savings (2.3% on MX warehouse):",
+    "totalEstimated": "Total estimated (net cashback + effective savings):",
+    "totalDisclaimer": "The total combines card return and price savings; it is not a single type of points or cashback.",
+    "cards": {
+      "banregio-platinum": {
+        "name": "Banregio Platinum",
+        "categories": {
+          "compras": "Purchases"
+        }
+      },
+      "santander-like-u": {
+        "name": "Santander Like U",
+        "categories": {
+          "telecom": "Telecom",
+          "restaurantes": "Restaurants",
+          "farmacias": "Pharmacies",
+          "supermercados": "Supermarkets"
+        }
+      },
+      "costco-citibanamex": {
+        "name": "Costco Citibanamex",
+        "categories": {
+          "gasolina-costco-mx": "Costco Mexico gas",
+          "educacion": "Education",
+          "costco-mx-us-web": "Costco (MX / US / online)",
+          "rest-streaming-tv-internet": "Restaurants, streaming, paid TV, and internet",
+          "demas-compras": "All other purchases"
+        }
+      }
+    }
   }
 }
