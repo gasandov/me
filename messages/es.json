@@ -172,5 +172,53 @@
     "now": "Ahora",
     "uses": "Herramientas",
     "photos": "Fotos"
+  },
+  "cashbackCalculator": {
+    "title": "Calcula tu beneficio real",
+    "cardLabel": "Tarjeta",
+    "cashbackSectionHeading": "Cashback — gasto mensual por categoría (MXN)",
+    "warehouseLabel": "Compras en bodega Costco México",
+    "warehouseRateHint": "(ahorro precio efectivo ~2,3% / mes)",
+    "warehouseHelp": "Opcional: estimado sobre compras en tienda física en México. No cuenta para el tope mensual de cashback de la tarjeta. Los términos pueden variar; cifra orientativa.",
+    "monthlyCapLabel": "Tope mensual (MXN)",
+    "monthlyCapHelp": "0 = sin tope. Se aplica a la suma del cashback de la tarjeta, no por categoría.",
+    "annualFeeLabel": "Anualidad sin IVA (MXN)",
+    "annualFeeHelp": "Al beneficio neto se resta la anualidad con IVA ({rate}%).",
+    "monthlyCashbackNoCap": "Cashback mensual (sin tope):",
+    "monthlyCashbackWithCap": "Cashback mensual (con tope):",
+    "capApplied": "(tope aplicado)",
+    "annualCashback": "Cashback anual:",
+    "annualFeeWithVat": "Anualidad con IVA:",
+    "netBenefit": "Beneficio neto (cashback − anualidad con IVA):",
+    "warehouseAnnualSavings": "Ahorro efectivo anual estimado (2,3% sobre bodega MX):",
+    "totalEstimated": "Total estimado (neto cashback + ahorro efectivo):",
+    "totalDisclaimer": "El total mezcla retorno de la tarjeta y ahorro por precio; no es un solo tipo de puntos o cashback.",
+    "cards": {
+      "banregio-platinum": {
+        "name": "Banregio Platinum",
+        "categories": {
+          "compras": "Compras"
+        }
+      },
+      "santander-like-u": {
+        "name": "Santander Like U",
+        "categories": {
+          "telecom": "Telecom",
+          "restaurantes": "Restaurantes",
+          "farmacias": "Farmacias",
+          "supermercados": "Supermercados"
+        }
+      },
+      "costco-citibanamex": {
+        "name": "Costco Citibanamex",
+        "categories": {
+          "gasolina-costco-mx": "Gasolina Costco MX",
+          "educacion": "Educación",
+          "costco-mx-us-web": "Costco (MX / US / web)",
+          "rest-streaming-tv-internet": "Restaurantes, streaming, TV de pago e internet",
+          "demas-compras": "Demás compras"
+        }
+      }
+    }
   }
 }
