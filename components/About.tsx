@@ -3,6 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { MapPinIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -41,19 +42,29 @@ export function About() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl font-bold text-center mb-14 text-foreground"
+            className="text-3xl sm:text-4xl font-bold text-center mb-10 text-foreground"
           >
             {t("heading")}
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div variants={fadeUp} className="space-y-4">
-              <p className="text-foreground text-base sm:text-lg leading-relaxed">
-                {t("bio")}
-              </p>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                {t("bio2")}
-              </p>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <motion.div variants={fadeUp} className="flex flex-col items-center gap-6">
+              <div className="relative w-48 h-48 rounded-full overflow-hidden ring-4 ring-primary/20">
+                <Image
+                  src="/avatar.png"
+                  alt="German Sandoval"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-4">
+                <p className="text-foreground text-base sm:text-lg leading-relaxed">
+                  {t("bio")}
+                </p>
+                <p className="text-muted-foreground text-base leading-relaxed">
+                  {t("bio2")}
+                </p>
+              </div>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex flex-col gap-4">
