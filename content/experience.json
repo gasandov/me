@@ -4,15 +4,13 @@
       "key": "pay_mitto",
       "company": "PayMitto",
       "start": "2024-08",
-      "end": null,
-      "stack": []
+      "end": null
     },
     {
       "key": "wizeline",
       "company": "Wizeline",
       "start": "2022-09",
       "end": "2024-08",
-      "stack": [],
       "subprojects": [{ "key": "boattrader" }, { "key": "synchrony" }]
     },
     {
@@ -20,36 +18,31 @@
       "company": "Freelance",
       "start": "2021-08",
       "end": "2022-09",
-      "stack": [],
       "subprojects": [{ "key": "tono" }, { "key": "gm" }]
     },
     {
       "key": "luxoft_second_stage",
       "company": "Luxoft",
       "start": "2021-02",
-      "end": "2021-08",
-      "stack": []
+      "end": "2021-08"
     },
     {
       "key": "clip",
       "company": "Clip",
       "start": "2020-07",
-      "end": "2021-02",
-      "stack": []
+      "end": "2021-02"
     },
     {
       "key": "luxoft",
       "company": "Luxoft",
       "start": "2019-08",
-      "end": "2020-06",
-      "stack": []
+      "end": "2020-06"
     },
     {
       "key": "ibm",
       "company": "IBM",
       "start": "2017-05",
-      "end": "2019-02",
-      "stack": []
+      "end": "2019-02"
     }
   ]
 }

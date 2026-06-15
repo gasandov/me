@@ -8,6 +8,7 @@ import type { BlogPostMeta } from "@/lib/blog";
 
 interface BlogSearchProps {
   posts: BlogPostMeta[];
+  locale: string;
   searchPlaceholder: string;
   noResults: string;
   readMore: string;
@@ -16,6 +17,7 @@ interface BlogSearchProps {
 
 export function BlogSearch({
   posts,
+  locale,
   searchPlaceholder,
   noResults,
   readMore,
@@ -52,6 +54,7 @@ export function BlogSearch({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={searchPlaceholder}
+          aria-label={searchPlaceholder}
           className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-border bg-muted text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm transition-colors"
         />
       </div>
@@ -65,6 +68,7 @@ export function BlogSearch({
             <BlogCard
               key={post.slug}
               post={post}
+              locale={locale}
               readMore={readMore}
               readingTimeLabel={readingTimeLabel}
             />

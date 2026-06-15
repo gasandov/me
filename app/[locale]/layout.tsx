@@ -75,17 +75,6 @@ export async function generateMetadata({
   };
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Germán Sandoval",
-  url: SITE_URL,
-  jobTitle: "Full-Stack Software Engineer",
-  description:
-    "Full-stack software engineer building scalable web applications with clean code and thoughtful UX.",
-  sameAs: ["https://github.com/gasandov", "https://linkedin.com/in/gasandov"],
-};
-
 export default async function LocaleLayout({
   children,
   params,
@@ -102,6 +91,17 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const tHero = await getTranslations({ locale, namespace: "hero" });
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: tHero("name"),
+    url: SITE_URL,
+    jobTitle: tHero("title"),
+    description: tHero("tagline"),
+    sameAs: ["https://github.com/gasandov", "https://linkedin.com/in/gasandov"],
+  };
 
   return (
     <html

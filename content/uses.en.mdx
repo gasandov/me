@@ -1,0 +1,91 @@
+---
+lastUpdated: "2026-03-16"
+---
+
+A living document of the hardware, software, and services I use day to day. Updated whenever something changes.
+
+## Hardware
+
+### Computer
+
+- **MacBook Pro M3 Pro** — 18 GB unified memory, 512 GB SSD. Fanless under normal workloads, handles everything I throw at it.
+- **LG 27UK850-W** — 27" 4K UHD IPS monitor for the desk setup.
+
+### Peripherals
+
+- **Logitech MX Keys** — comfortable, quiet, and the backlight actually works well in dim light
+- **Logitech MX Master 3** — once you use the scroll wheel you can't go back
+- **Sony WH-1000XM5** — noise cancellation is essential in a busy city
+- **IKEA BEKANT** sit-stand desk
+
+---
+
+## Editor & Terminal
+
+### Editor
+
+**[Cursor](https://cursor.sh)** — AI-powered fork of VS Code. I tried to resist but the tab completion and chat features are genuinely great for productivity.
+
+Settings I care about:
+- Theme: **One Dark Pro**
+- Font: **Geist Mono** at 13px, ligatures on
+- Extensions: ESLint, Prettier, Tailwind CSS IntelliSense, GitLens, Error Lens
+
+### Terminal
+
+**[Warp](https://warp.dev)** as my primary terminal — autocomplete and AI command lookup save a lot of time.
+
+- Shell: **zsh** with [Oh My Zsh](https://ohmyz.sh) + [Starship](https://starship.rs) prompt
+- Key plugins: `zsh-autosuggestions`, `zsh-syntax-highlighting`
+
+---
+
+## Software
+
+### Development
+
+- **[Bun](https://bun.sh)** — faster installs and scripts than npm/yarn. Not always possible in team projects, but great for personal work
+- **[Docker Desktop](https://docker.com)** — local databases and services in containers so my machine stays clean
+- **[TablePlus](https://tableplus.com)** — the best GUI for PostgreSQL, MySQL, SQLite, and Redis
+- **[Bruno](https://usebruno.com)** — open-source API client, files live in the repo
+- **[Proxyman](https://proxyman.io)** — HTTP proxy for debugging network traffic
+
+### Productivity
+
+- **[Raycast](https://raycast.com)** — launcher, clipboard history, snippets, and window management. Replaced Alfred and a bunch of menu bar apps
+- **[Arc](https://arc.net)** — my daily browser. Spaces and tabs-as-notes changed how I browse
+- **[Notion](https://notion.so)** — personal knowledge base, project notes, and todos
+- **[CleanMyMac X](https://cleanmymac.com)** — keeps disk usage in check
+
+### Design
+
+- **[Figma](https://figma.com)** — UI design and prototyping
+
+---
+
+## Services
+
+- **[Vercel](https://vercel.com)** — hosting this site and most side projects (Hobby plan is genuinely great)
+- **[GitHub](https://github.com)** — source control, CI/CD
+- **[Resend](https://resend.com)** — transactional email
+- **[Neon](https://neon.tech)** — serverless PostgreSQL for side projects
+
+---
+
+## Stack I Default To
+
+When starting a new greenfield project:
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js (App Router) + TypeScript |
+| Styling | Tailwind CSS v4 |
+| Database | PostgreSQL via Neon |
+| ORM | Prisma |
+| Auth | Better Auth |
+| Email | Resend + React Email |
+| Deployment | Vercel |
+
+---
+
+*Inspired by [uses.tech](https://uses.tech).*

@@ -2,6 +2,7 @@ import { Feed } from "feed";
 import { routing } from "@/i18n/routing";
 import { getAllPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/config";
+import { getTranslations } from "next-intl/server";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -12,10 +13,11 @@ export async function GET(
   { params }: { params: Promise<{ locale: string }> },
 ) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
 
   const feed = new Feed({
-    title: "Germán Sandoval — Blog",
-    description: "Thoughts on web development, architecture, and software craft.",
+    title: t("rssTitle"),
+    description: t("rssDescription"),
     id: `${SITE_URL}/${locale}/blog`,
     link: `${SITE_URL}/${locale}/blog`,
     language: locale,
@@ -40,7 +42,7 @@ export async function GET(
       link: url,
       description: post.description,
       date: new Date(post.date),
-      category: post.tags.map((t) => ({ name: t })),
+      category: post.tags.map((tag) => ({ name: tag })),
       author: [{ name: "Germán Sandoval", link: SITE_URL }],
     });
   }

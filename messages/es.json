@@ -22,7 +22,7 @@
   "about": {
     "heading": "Sobre mí",
     "bio": "Soy un ingeniero de software apasionado con experiencia en el desarrollo de aplicaciones web modernas. Me encanta la arquitectura limpia, la excelente experiencia del desarrollador y trabajar en productos que la gente disfruta.",
-    "bio2": "Cuando no estoy programando, me encontrarás explorando aprendiendo idomas con Duolingo, viendo series, leyendo libros, tomando fotos o experimentando con proyectos personales.",
+    "bio2": "Cuando no estoy programando, me encontrarás explorando aprendiendo idiomas con Duolingo, viendo series, leyendo libros, tomando fotos o experimentando con proyectos personales.",
     "location": "Con base en Mérida, MX",
     "locationLabel": "Ubicación",
     "status": "Abierto a nuevas oportunidades y relocación",
@@ -44,6 +44,7 @@
   "experience": {
     "heading": "Experiencia",
     "present": "Presente",
+    "projects": "Proyectos",
     "pay_mitto": {
       "role": "Ingeniero de Software Senior",
       "location": "Mérida, MX (Remoto)",
@@ -144,11 +145,16 @@
   },
   "blog": {
     "heading": "Blog",
+    "metaDescription": "Reflexiones sobre desarrollo web, arquitectura y el oficio del software.",
+    "postCount": "{count, plural, one {# artículo} other {# artículos}}",
     "readMore": "Leer más",
     "readingTime": "{minutes} min de lectura",
     "searchPlaceholder": "Buscar artículos...",
     "noResults": "No se encontraron artículos.",
-    "backToBlog": "Volver al Blog"
+    "backToBlog": "Volver al Blog",
+    "closeImage": "Cerrar imagen",
+    "rssTitle": "Germán Sandoval — Blog",
+    "rssDescription": "Reflexiones sobre desarrollo web, arquitectura y el oficio del software."
   },
   "photos": {
     "heading": "Fotos",
@@ -171,6 +177,11 @@
     "now": "Ahora",
     "uses": "Herramientas",
     "photos": "Fotos"
+  },
+  "notFound": {
+    "heading": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "backHome": "Volver al inicio"
   },
   "cashbackCalculator": {
     "title": "Calcula tu beneficio real",

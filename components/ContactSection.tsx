@@ -1,22 +1,8 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  },
-};
-
-const stagger: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
-};
+import { fadeUp, stagger } from "@/lib/motion";
 
 const SOCIAL_LINKS = [
   {

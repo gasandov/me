@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { bcp47FromLocale, formatMxAmount, formatRatePercent } from "@/utils/format";
 
 type CardCategoryDef = {
   id: string;
@@ -46,20 +47,6 @@ function zeroSpendingByCategory(card: CardDefinition): Record<string, number> {
   return Object.fromEntries(card.categories.map((c) => [c.id, 0]));
 }
 
-function bcp47FromLocale(locale: string): string {
-  return locale === "es" ? "es-MX" : "en-US";
-}
-
-function formatMxAmount(amount: number, bcp47: string): string {
-  return `$${amount.toLocaleString(bcp47)}`;
-}
-
-function formatRatePercent(rate: number, bcp47: string): string {
-  return rate.toLocaleString(bcp47, {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2,
-  });
-}
 
 const inputClassName =
   "w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50";

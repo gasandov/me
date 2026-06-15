@@ -42,6 +42,7 @@
   "experience": {
     "heading": "Experience",
     "present": "Present",
+    "projects": "Projects",
     "pay_mitto": {
       "role": "Senior Software Engineer",
       "location": "Merida, MX (Remote)",
@@ -142,11 +143,16 @@
   },
   "blog": {
     "heading": "Blog",
+    "metaDescription": "Thoughts on web development, architecture, and software craft.",
+    "postCount": "{count, plural, one {# post} other {# posts}}",
     "readMore": "Read more",
     "readingTime": "{minutes} min read",
     "searchPlaceholder": "Search posts...",
     "noResults": "No posts found.",
-    "backToBlog": "Back to Blog"
+    "backToBlog": "Back to Blog",
+    "closeImage": "Close image",
+    "rssTitle": "Germán Sandoval — Blog",
+    "rssDescription": "Thoughts on web development, architecture, and software craft."
   },
   "photos": {
     "heading": "Photos",
@@ -169,6 +175,11 @@
     "now": "Now",
     "uses": "Uses",
     "photos": "Photos"
+  },
+  "notFound": {
+    "heading": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to home"
   },
   "cashbackCalculator": {
     "title": "Calculate your real benefit",
