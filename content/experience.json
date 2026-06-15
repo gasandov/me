@@ -1,32 +1,27 @@
 {
   "items": [
     {
-      "key": "freelance",
-      "company": "Freelance / Consulting",
-      "start": "2019-03",
-      "end": null,
-      "stack": [],
-      "subprojects": [{ "key": "brightwell" }, { "key": "tono" }]
-    },
-    {
-      "key": "kunai",
-      "company": "Kunai",
+      "key": "pay_mitto",
+      "company": "PayMitto",
       "start": "2024-08",
-      "end": "2025-05",
+      "end": null,
       "stack": []
     },
     {
       "key": "wizeline",
       "company": "Wizeline",
       "start": "2022-09",
-      "end": "2024-07",
+      "end": "2024-08",
       "stack": [],
-      "subprojects": [
-        { "key": "boattrader" },
-        { "key": "synchrony" },
-        { "key": "cerby" },
-        { "key": "wizelineos" }
-      ]
+      "subprojects": [{ "key": "boattrader" }, { "key": "synchrony" }]
+    },
+    {
+      "key": "freelance",
+      "company": "Freelance",
+      "start": "2021-08",
+      "end": "2022-09",
+      "stack": [],
+      "subprojects": [{ "key": "tono" }, { "key": "gm" }]
     },
     {
       "key": "luxoft_second_stage",
@@ -38,7 +33,7 @@
     {
       "key": "clip",
       "company": "Clip",
-      "start": "2020-06",
+      "start": "2020-07",
       "end": "2021-02",
       "stack": []
     },

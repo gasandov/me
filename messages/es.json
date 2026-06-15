@@ -44,29 +44,15 @@
   "experience": {
     "heading": "Experiencia",
     "present": "Presente",
-    "freelance": {
+    "pay_mitto": {
       "role": "Ingeniero de Software Senior",
-      "location": "MX (Remoto)",
+      "location": "Mérida, MX (Remoto)",
       "bullets": [
-        "Di soporte a proyectos para Leviti, Condé Nast y ARC XP, entregando soluciones de ingeniería que aceleraron la implementación de características en un 25% y redujeron los errores en un 30%, mejorando la calidad del producto y la entrega.",
-        "Proporcioné soporte para Oracle al corregir errores y mantener consultas PL/SQL."
-      ],
-      "subprojects": {
-        "brightwell": {
-          "name": "Brightwell",
-          "description": "Construí un SDK para Brightwell desde cero, entregando antes de los plazos ajustados y liderando la selección de tecnologías para alinear con los requisitos del proyecto."
-        },
-        "tono": {
-          "name": "TonoHealth",
-          "description": "Construí una aplicación dermatológica integral para TonoHealth con chat en vivo, consultas en video y características de comercio electrónico integradas."
-        }
-      }
-    },
-    "kunai": {
-      "role": "Ingeniero Full-Stack (Frontend Focus)",
-      "location": "Guadalajara, MX (Remoto)",
-      "bullets": [
-        "Creé nuevas experiencias visuales para clientes de AtlasSP, aumentando la participación y diseñé la lógica del lado del servidor que redujo la latencia de las API y los errores, permitiendo una funcionalidad sin problemas"
+        "Contribuí a una plataforma que procesa más de 50K transacciones de pago diarias mediante integraciones con más de 10 socios bancarios y de pagos.",
+        "Seleccioné y definí el stack tecnológico frontend, los patrones de arquitectura y los estándares de ingeniería para un SDK de pagos internacionales desde cero, compatible con más de 15 monedas y 8 métodos de pago.",
+        "Diseñé e implementé el contrato de comunicación entre las aplicaciones anfitrionas y el SDK mediante mensajería de eventos basada en ventana, permitiendo una integración fluida entre múltiples socios bancarios y productos.",
+        "Establecí estándares de ingeniería frontend, incluyendo gestión de estado, patrones de obtención de datos, estrategias de carga y guías de arquitectura de aplicaciones para mejorar la escalabilidad y mantenibilidad.",
+        "Lideré los esfuerzos de arquitectura e implementación en tres iniciativas de producto concurrentes, coordinando el trabajo entre partes interesadas de frontend, backend y producto, mientras mentoreaba a ingenieros."
       ]
     },
     "wizeline": {
@@ -76,19 +62,26 @@
       "subprojects": {
         "boattrader": {
           "name": "BoatTrader",
-          "description": "Dirigí el desarrollo de nuevas funcionalidades y optimizaciones de SEO para BoatTrader, elevando el puntaje de Lighthouse de 60 a 90 puntos y aumentando la visibilidad del sitio, resultando en un aumento del 15% en el tráfico orgánico."
+          "description": "Contribuí a un aumento del 15% en el tráfico orgánico mejorando los Core Web Vitals y reduciendo los tiempos de carga de página."
         },
         "synchrony": {
           "name": "Synchrony",
-          "description": "Logré un gran aumento de SEO en Synchrony, elevando el puntaje de Lighthouse de 60 a 90 puntos."
+          "description": "Lideré iniciativas de rendimiento frontend, refactorizando la gestión de estado y optimizando estrategias de obtención de datos con GraphQL."
+        }
+      }
+    },
+    "freelance": {
+      "role": "Contratista de Software Independiente",
+      "location": "Guadalajara, MX (Remoto)",
+      "bullets": [],
+      "subprojects": {
+        "tono": {
+          "name": "TonoHealth",
+          "description": "Implementé consultas de video, mensajería en tiempo real, flujos de autenticación y procesamiento de pagos con Stripe."
         },
-        "cerby": {
-          "name": "Cerby",
-          "description": "Gané reconocimiento como top performer en Cerby y desarrollé técnicas de scraping refinadas para una eficiencia óptima en múltiples plataformas."
-        },
-        "wizelineos": {
-          "name": "WizelineOS",
-          "description": "Mejoré la herramienta interna de WizelineOS liderando un rediseño de UI/UX, optimizando consultas GraphQL y refinando el código para mejorar la funcionalidad y la experiencia del usuario."
+        "gm": {
+          "name": "General Motors",
+          "description": "Implementé flujos de trabajo orientados a mensajes y patrones de comunicación asíncrona para procesar eventos de uso vehicular y desencadenar campañas de participación personalizada con clientes."
         }
       }
     },
@@ -96,28 +89,34 @@
       "role": "Ingeniero de Software Senior",
       "location": "Guadalajara, MX (Remoto)",
       "bullets": [
-        "Integré Backstage para Expedia, adaptándolo a los requisitos de la empresa y mejorando la eficiencia operativa."
+        "Lideré un equipo de 5 ingenieros entregando iniciativas de plataforma para desarrolladores y mejoras de herramientas internas para Expedia Group.",
+        "Integré Spotify Backstage en el ecosistema de ingeniería de Expedia, mejorando el descubrimiento de servicios y la experiencia del desarrollador.",
+        "Conduje entrevistas técnicas y contribuí a las decisiones de contratación de ingeniería frontend."
       ]
     },
     "clip": {
       "role": "Ingeniero Full-Stack",
       "location": "Guadalajara, MX (Remoto)",
       "bullets": [
-        "Colaboré en el desarrollo de microservicios en AWS y RabbitMQ. Abordé potenciales cuellos de botella de manera proactiva, asegurando la comunicación y la escalabilidad en las aplicaciones web y móviles."
+        "Diseñé e implementé microservicios de procesamiento de pagos orientados a eventos en AWS Lambda usando patrones de mensajería RabbitMQ, soportando más de 200K transacciones diarias en una base de clientes que supera los 500K usuarios.",
+        "Colaboré con equipos multifuncionales para mejorar la confiabilidad, observabilidad y escalabilidad operativa de la infraestructura de pagos.",
+        "Contribuí a discusiones de arquitectura backend e iniciativas de diseño de servicios nativos en la nube."
       ]
     },
     "luxoft": {
       "role": "Ingeniero de Software",
-      "location": "Guadalajara, MX (Híbrido)",
+      "location": "Guadalajara, MX (On-site)",
       "bullets": [
-        "Desarrollé y mejoré una biblioteca de componentes React compartida para Expedia, fomentando uniformidad y mejorando la cohesión de la interfaz de usuario en las aplicaciones, con más de 50 componentes reutilizables."
+        "Lideré el diseño y adopción de una biblioteca de componentes React compartida con más de 50 componentes reutilizables utilizados en múltiples equipos de Expedia Group.",
+        "Reduje el esfuerzo de desarrollo frontend en aproximadamente un 40% mediante la estandarización y reutilización de componentes."
       ]
     },
     "ibm": {
       "role": "Desarrollador de Aplicaciones",
       "location": "Guadalajara, MX (On-site)",
       "bullets": [
-        "Reduje el tiempo de respuesta de 3 minutos a 30 segundos (~83%) implementando estrategias de indexación en la base de datos y optimizando el código."
+        "Migré más de 80 vistas legacy de Handlebars a aplicaciones React, reduciendo el Time to Interactive en un 55%.",
+        "Reduje los tiempos de ejecución de consultas de base de datos de 3 minutos a 30 segundos mediante indexación y optimización de consultas."
       ]
     }
   },
