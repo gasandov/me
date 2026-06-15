@@ -8,6 +8,7 @@ import { Link } from "@/i18n/navigation";
 import { ArrowLeftIcon, ClockIcon, TagIcon } from "@heroicons/react/24/outline";
 import { SITE_URL } from "@/lib/config";
 import { CashbackCalculator } from "@/components/blog/CashbackCalculator";
+import { BlogImage } from "@/components/blog/BlogImage";
 
 export function generateStaticParams() {
   const posts = getAllPosts();
@@ -107,11 +108,11 @@ export default async function BlogPostPage({
             ))}
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight mb-4 text-justify">
             {post.title}
           </h1>
 
-          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6 text-justify">
             {post.description}
           </p>
 
@@ -129,7 +130,7 @@ export default async function BlogPostPage({
         <article className="prose prose-neutral text-justify dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-foreground/90 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-img:rounded-xl prose-li:text-foreground/90">
           <MDXRemote
             source={post.content}
-            components={{ CashbackCalculator }}
+            components={{ CashbackCalculator, img: BlogImage }}
           />
         </article>
       </div>

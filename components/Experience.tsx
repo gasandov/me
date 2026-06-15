@@ -6,7 +6,8 @@ import { useLocale, useTranslations } from "next-intl";
 import experienceData from "@/content/experience.json";
 
 function formatMonthYear(dateStr: string, locale: string): string {
-  const date = new Date(`${dateStr}-01`);
+  const [year, month] = dateStr.split("-").map(Number);
+  const date = new Date(year, month - 1, 1);
   return new Intl.DateTimeFormat(locale, {
     month: "short",
     year: "numeric",
