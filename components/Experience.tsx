@@ -1,45 +1,12 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 
 import experienceData from "@/content/experience.json";
-
-function formatMonthYear(dateStr: string, locale: string): string {
-  const [year, month] = dateStr.split("-").map(Number);
-  const date = new Date(year, month - 1, 1);
-  return new Intl.DateTimeFormat(locale, {
-    month: "short",
-    year: "numeric",
-  }).format(date);
-}
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  },
-};
-
-const stagger: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
-};
-
-interface Subproject {
-  key: string;
-}
-
-interface ExperienceItem {
-  key: string;
-  company: string;
-  start: string;
-  end: string | null;
-  stack: string[];
-  subprojects?: Subproject[];
-}
+import { fadeUp, stagger } from "@/lib/motion";
+import { formatMonthYear } from "@/utils/format";
+import type { ExperienceItem } from "@/types";
 
 export function Experience() {
   const t = useTranslations("experience");
@@ -69,10 +36,10 @@ export function Experience() {
 
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-border hidden sm:block" />
+            <div className="absolute left-4 top-0 bottom-0 w-px bg-border hidden sm:block" aria-hidden="true" />
 
             <div className="space-y-10">
-              {(experienceData.items as ExperienceItem[]).map((item, i) => {
+              {(experienceData.items as ExperienceItem[]).map((item) => {
                 const bullets = t.raw(`${item.key}.bullets`) as string[];
                 const subprojectTranslations = item.subprojects
                   ? (
@@ -85,12 +52,15 @@ export function Experience() {
 
                 return (
                   <motion.div
-                    key={i}
+                    key={item.company + item.start}
                     variants={fadeUp}
                     className="sm:pl-14 relative"
                   >
                     {/* Timeline dot */}
-                    <div className="hidden sm:flex absolute left-0 top-1.5 h-8 w-8 items-center justify-center rounded-full bg-card border-2 border-primary shadow-sm">
+                    <div
+                      aria-hidden="true"
+                      className="hidden sm:flex absolute left-0 top-1.5 h-8 w-8 items-center justify-center rounded-full bg-card border-2 border-primary shadow-sm"
+                    >
                       <div className="h-2.5 w-2.5 rounded-full bg-primary" />
                     </div>
 
@@ -123,7 +93,7 @@ export function Experience() {
                             key={j}
                             className="flex gap-2 text-sm text-muted-foreground leading-relaxed"
                           >
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" aria-hidden="true" />
                             {bullet}
                           </li>
                         ))}
@@ -132,7 +102,7 @@ export function Experience() {
                       {item.subprojects && subprojectTranslations && (
                         <div className="mb-4 space-y-2">
                           <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                            Projects
+                            {t("projects")}
                           </p>
                           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                             {item.subprojects.map((sp) => {
@@ -155,17 +125,6 @@ export function Experience() {
                           </div>
                         </div>
                       )}
-
-                      <div className="flex flex-wrap gap-1.5">
-                        {item.stack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="text-xs px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
                     </div>
                   </motion.div>
                 );

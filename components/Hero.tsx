@@ -6,6 +6,10 @@ import { ArrowDownIcon } from "@heroicons/react/24/outline";
 
 const RESUME_URL = process.env.NEXT_PUBLIC_RESUME_URL ?? "#";
 
+if (process.env.NODE_ENV === "development" && !process.env.NEXT_PUBLIC_RESUME_URL) {
+  console.warn("[Hero] NEXT_PUBLIC_RESUME_URL is not set — resume button will point to \"#\".");
+}
+
 const container: Variants = {
   hidden: { opacity: 0 },
   visible: {

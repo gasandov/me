@@ -1,25 +1,12 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
   ArrowTopRightOnSquareIcon,
   CodeBracketIcon,
 } from "@heroicons/react/24/outline";
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  },
-};
-
-const stagger: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
-};
+import { fadeUp, stagger } from "@/lib/motion";
 
 interface Project {
   title: string;

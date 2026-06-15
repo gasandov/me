@@ -1,20 +1,12 @@
-import fs from "fs";
-import path from "path";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import matter from "gray-matter";
 import { routing, type Locale } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { SITE_URL } from "@/lib/config";
-
-function getNowContent() {
-  const filePath = path.join(process.cwd(), "content/now.mdx");
-  if (!fs.existsSync(filePath)) return null;
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const { content, data } = matter(raw);
-  return { content, frontmatter: data as { lastUpdated?: string } };
-}
+import { PROSE_PAGE } from "@/lib/prose";
+import { getLocaleMdxContent } from "@/lib/mdx-page";
+import { bcp47FromLocale } from "@/utils/format";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -60,12 +52,12 @@ export default async function NowPage({
 
   const t = await getTranslations({ locale, namespace: "now" });
 
-  const doc = getNowContent();
+  const doc = getLocaleMdxContent("now", locale);
   if (!doc) notFound();
 
   const formattedDate = doc.frontmatter.lastUpdated
     ? new Date(doc.frontmatter.lastUpdated).toLocaleDateString(
-        locale === "de" ? "de-DE" : locale === "es" ? "es-MX" : "en-US",
+        bcp47FromLocale(locale),
         { year: "numeric", month: "long", day: "numeric" },
       )
     : null;
@@ -90,7 +82,7 @@ export default async function NowPage({
           )}
         </header>
 
-        <article className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-foreground/90 prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-li:text-foreground/90 prose-table:text-sm prose-th:text-foreground prose-td:text-foreground/90">
+        <article className={PROSE_PAGE}>
           <MDXRemote source={doc.content} />
         </article>
       </div>

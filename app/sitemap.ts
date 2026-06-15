@@ -14,12 +14,11 @@ const STATIC_PAGES = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static pages — one entry per locale
+  // Static pages — one entry per locale (no lastModified; prevents false "just updated" signals)
   for (const locale of routing.locales) {
     for (const page of STATIC_PAGES) {
       entries.push({
         url: `${SITE_URL}/${locale}${page}`,
-        lastModified: new Date(),
         changeFrequency: page === "" ? "weekly" : "monthly",
         priority: page === "" ? 1 : 0.7,
         alternates: {

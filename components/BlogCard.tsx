@@ -1,18 +1,23 @@
 import { Link } from "@/i18n/navigation";
 import type { BlogPostMeta } from "@/lib/blog";
+import { bcp47FromLocale } from "@/utils/format";
 
 interface BlogCardProps {
   post: BlogPostMeta;
+  locale: string;
   readMore: string;
   readingTimeLabel: string;
 }
 
-export function BlogCard({ post, readMore, readingTimeLabel }: BlogCardProps) {
-  const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+export function BlogCard({ post, locale, readMore, readingTimeLabel }: BlogCardProps) {
+  const formattedDate = new Date(post.date).toLocaleDateString(
+    bcp47FromLocale(locale),
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    },
+  );
 
   return (
     <article className="group flex flex-col gap-3 p-6 rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all duration-300">

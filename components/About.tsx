@@ -1,23 +1,10 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { MapPinIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  },
-};
-
-const stagger: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
-};
+import { fadeUp, stagger } from "@/lib/motion";
 
 type LanguageEntry = { name: string; level: string };
 
@@ -69,7 +56,7 @@ export function About() {
 
             <motion.div variants={fadeUp} className="flex flex-col gap-4">
               <div className="flex items-center gap-3 p-4 rounded-2xl bg-card border border-border">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10" aria-hidden="true">
                   <MapPinIcon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -83,7 +70,7 @@ export function About() {
               </div>
 
               <div className="flex items-center gap-3 p-4 rounded-2xl bg-card border border-border">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10" aria-hidden="true">
                   <BriefcaseIcon className="w-5 h-5 text-emerald-500" />
                 </div>
                 <div>

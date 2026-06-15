@@ -7,7 +7,7 @@ export const config = {
   matcher: [
     // Match all pathnames except for internal Next.js paths and static files
     "/((?!_next|_vercel|api|.*\\..*).*)",
-    // Always run for API routes
-    "/(en|es|de)/:path*",
+    // Always run for locale routes
+    "/(en|es)/:path*",
   ],
 };

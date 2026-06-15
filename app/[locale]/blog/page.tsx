@@ -20,7 +20,7 @@ export async function generateMetadata({
 
   return {
     title: t("heading"),
-    description: t("heading"),
+    description: t("metaDescription"),
     alternates: {
       canonical: `${SITE_URL}/${locale}/blog`,
       languages: {
@@ -34,7 +34,7 @@ export async function generateMetadata({
       type: "website",
       url: `${SITE_URL}/${locale}/blog`,
       title: `${t("heading")} | ${tHero("name")}`,
-      description: t("heading"),
+      description: t("metaDescription"),
     },
   };
 }
@@ -59,12 +59,13 @@ export default async function BlogPage({
             {t("heading")}
           </h1>
           <p className="text-muted-foreground">
-            {posts.length} {posts.length === 1 ? "post" : "posts"}
+            {t("postCount", { count: posts.length })}
           </p>
         </div>
 
         <BlogSearch
           posts={posts}
+          locale={locale}
           searchPlaceholder={t("searchPlaceholder")}
           noResults={t("noResults")}
           readMore={t("readMore")}

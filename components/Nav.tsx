@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useTheme } from "next-themes";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
@@ -34,15 +34,10 @@ export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [prevPathname, setPrevPathname] = useState(pathname);
-
-  if (prevPathname !== pathname) {
-    setPrevPathname(pathname);
-    setMenuOpen(false);
-  }
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setMounted(true);
+    setMounted(true); // eslint-disable-line react-hooks/set-state-in-effect
   }, []);
 
   useEffect(() => {
@@ -50,6 +45,38 @@ export function Nav() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Focus trap for mobile menu
+  useEffect(() => {
+    if (!menuOpen) return;
+    const menu = menuRef.current;
+    if (!menu) return;
+
+    const focusable = menu.querySelectorAll<HTMLElement>(
+      'a, button, [tabindex]:not([tabindex="-1"])',
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    const trapFocus = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last?.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+
+    menu.addEventListener("keydown", trapFocus);
+    first?.focus();
+    return () => menu.removeEventListener("keydown", trapFocus);
+  }, [menuOpen]);
 
   function switchLocale(next: Locale) {
     router.replace(pathname, { locale: next, scroll: false });
@@ -154,6 +181,8 @@ export function Nav() {
           <button
             onClick={() => setMenuOpen((o) => !o)}
             aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
             className="md:hidden p-2 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
           >
             {menuOpen ? (
@@ -167,7 +196,11 @@ export function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
+        <div
+          id="mobile-menu"
+          ref={menuRef}
+          className="md:hidden border-t border-border bg-background/95 backdrop-blur-md"
+        >
           <ul className="flex flex-col px-4 py-4 gap-3">
             {NAV_LINKS.map((key) => (
               <li key={key}>
@@ -183,6 +216,7 @@ export function Nav() {
             <li>
               <Link
                 href="/blog"
+                onClick={() => setMenuOpen(false)}
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
               >
                 {t("blog")}
@@ -191,6 +225,7 @@ export function Nav() {
             <li>
               <Link
                 href="/photos"
+                onClick={() => setMenuOpen(false)}
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
               >
                 {t("photos")}
@@ -205,6 +240,7 @@ export function Nav() {
                     switchLocale(loc);
                     setMenuOpen(false);
                   }}
+                  aria-label={`Switch to ${loc}`}
                   className={`text-xs font-medium px-3 py-1 rounded-full border transition-colors ${
                     loc === locale
                       ? "bg-primary text-primary-foreground border-primary"

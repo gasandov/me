@@ -64,6 +64,22 @@ function buildSlugMap(
   );
 }
 
+interface RawFrontmatter {
+  title?: unknown;
+  date?: unknown;
+  description?: unknown;
+  tags?: unknown;
+}
+
+function parseFrontmatter(data: RawFrontmatter, slug: string): Omit<BlogPostMeta, "slug" | "readingTime"> {
+  return {
+    title: typeof data.title === "string" ? data.title : slug,
+    date: typeof data.date === "string" ? data.date : "",
+    description: typeof data.description === "string" ? data.description : "",
+    tags: Array.isArray(data.tags) ? (data.tags as string[]) : [],
+  };
+}
+
 function readPostMeta(slug: string, filePath: string): BlogPostMeta {
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
@@ -71,10 +87,7 @@ function readPostMeta(slug: string, filePath: string): BlogPostMeta {
 
   return {
     slug,
-    title: (data.title as string) ?? slug,
-    date: (data.date as string) ?? "",
-    description: (data.description as string) ?? "",
-    tags: (data.tags as string[]) ?? [],
+    ...parseFrontmatter(data as RawFrontmatter, slug),
     readingTime: Math.max(1, Math.ceil(rt.minutes)),
   };
 }
@@ -117,10 +130,7 @@ export function getPost(slug: string, locale?: string): BlogPost | null {
 
     return {
       slug,
-      title: (data.title as string) ?? slug,
-      date: (data.date as string) ?? "",
-      description: (data.description as string) ?? "",
-      tags: (data.tags as string[]) ?? [],
+      ...parseFrontmatter(data as RawFrontmatter, slug),
       readingTime: Math.max(1, Math.ceil(rt.minutes)),
       content,
     };
