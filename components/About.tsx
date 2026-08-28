@@ -35,7 +35,10 @@ export function About() {
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            <motion.div variants={fadeUp} className="flex flex-col items-center gap-6">
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-col items-center gap-6"
+            >
               <div className="relative w-48 h-48 rounded-full overflow-hidden ring-4 ring-primary/20">
                 <Image
                   src="/avatar.png"
@@ -56,7 +59,10 @@ export function About() {
 
             <motion.div variants={fadeUp} className="flex flex-col gap-4">
               <div className="flex items-center gap-3 p-4 rounded-2xl bg-card border border-border">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10" aria-hidden="true">
+                <div
+                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10"
+                  aria-hidden="true"
+                >
                   <MapPinIcon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -70,7 +76,10 @@ export function About() {
               </div>
 
               <div className="flex items-center gap-3 p-4 rounded-2xl bg-card border border-border">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10" aria-hidden="true">
+                <div
+                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10"
+                  aria-hidden="true"
+                >
                   <BriefcaseIcon className="w-5 h-5 text-emerald-500" />
                 </div>
                 <div>
@@ -85,7 +94,7 @@ export function About() {
 
               <div className="grid grid-cols-2 gap-3 mt-2">
                 {[
-                  { value: "8+", label: t("stats.yearsExp") },
+                  { value: "9+", label: t("stats.yearsExp") },
                   { value: "10+", label: t("stats.projects") },
                 ].map(({ value, label }) => (
                   <div

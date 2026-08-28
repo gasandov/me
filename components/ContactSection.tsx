@@ -87,10 +87,10 @@ export function ContactSection() {
           <motion.p variants={fadeUp} className="text-sm text-muted-foreground">
             {t("reachMe")}{" "}
             <a
-              href="mailto:german.sandoval.i@gmail.com"
+              href="mailto:german.sandoval.ie@gmail.com"
               className="text-primary hover:underline underline-offset-4"
             >
-              german.sandoval.i@gmail.com
+              german.sandoval.ie@gmail.com
             </a>
           </motion.p>
         </motion.div>

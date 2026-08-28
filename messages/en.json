@@ -14,18 +14,18 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Germán Sandoval",
-    "title": "Full-Stack Software Engineer",
-    "tagline": "I build scalable web applications with clean code and thoughtful UX.",
+    "title": "Senior Full Stack Engineer",
+    "tagline": "Building and scaling fintech, travel, and marketplace platforms for 9+ years — backend to frontend.",
     "cta_resume": "View Resume",
     "cta_contact": "Get in Touch"
   },
   "about": {
     "heading": "About Me",
-    "bio": "I'm a passionate software engineer with experience building modern web applications. I love clean architecture, great developer experience, and shipping products people enjoy.",
-    "bio2": "When I'm not coding, you'll find me exploring learning languages with Duolingo, watching series, reading books, taking photos or experimenting with side projects.",
-    "location": "Based in Merida, MX",
+    "bio": "I'm a senior full-stack engineer with 9+ years designing and scaling fintech, travel, and marketplace platforms. I work end to end — distributed systems, event-driven architecture, API and SDK design, and frontend architecture — and enjoy owning a product from system design through delivery.",
+    "bio2": "I also lead through mentorship, architecture reviews, and technical RFCs. When I'm not shipping code, I'm learning languages, reading, taking photos, following F1, or building side projects like Ridecito.",
+    "location": "Mérida, Mexico",
     "locationLabel": "Location",
-    "status": "Open to new opportunities and relocation",
+    "status": "Open to international opportunities & relocation abroad",
     "statusLabel": "Status",
     "stats": {
       "yearsExp": "Years of\nexperience",
@@ -35,7 +35,9 @@
       "label": "Languages",
       "list": [
         { "name": "Spanish", "level": "Native" },
-        { "name": "English", "level": "Fluent" }
+        { "name": "English", "level": "C1" },
+        { "name": "German", "level": "A2" },
+        { "name": "Japanese", "level": "N5" }
       ]
     }
   },
@@ -43,94 +45,75 @@
     "heading": "Experience",
     "present": "Present",
     "projects": "Projects",
+    "ridecito": {
+      "role": "Founder & Lead Engineer",
+      "location": "Mérida, Mexico · Side project",
+      "bullets": [
+        "Architected a full-stack B2B carpooling platform MVP with React, TanStack Router, and Supabase, including infrastructure for ESG Scope 3 CO₂ savings tracking.",
+        "Designed a flattened PostgreSQL schema to consolidate trip-routing data, applying the YAGNI principle to keep queries fast and the backend simple.",
+        "Built serverless backend logic with Supabase Deno Edge Functions and integrated Resend for transactional notifications, with GDPR and LFPDPPP compliance."
+      ]
+    },
     "pay_mitto": {
       "role": "Senior Software Engineer",
-      "location": "Merida, MX (Remote)",
+      "location": "Mérida, Mexico (Remote)",
       "bullets": [
-        "Contributed to a platform processing more than 50K daily payment transactions through integrations with 10+ banking and payment partners.",
-        "Selected and defined the frontend technology stack, architecture patterns, and engineering standards for a greenfield international payments SDK supporting 15+ currencies and 8+ payment methods.",
-        "Designed and implemented the communication contract between host applications and the SDK using window-based event messaging, enabling seamless integration across multiple banking partners and products.",
-        "Established frontend engineering standards, including state management, data-fetching patterns, loading strategies, and application architecture guidelines to improve scalability and maintainability.",
-        "Led architecture and implementation efforts across three concurrent product initiatives, coordinating work between frontend, backend, and product stakeholders while mentoring engineers."
+        "Led the architecture and development of a greenfield international payments Web SDK and integration layer within an 8-person team, supporting 1M+ annual transactions across 15+ currencies.",
+        "Designed the SDK architecture and defined API communication contracts with core backend teams, standardizing the integration layer across 12+ host applications.",
+        "Engineered a webhook extension bridging the frontend SDK with the Q2 digital banking platform, mapping complex execution flows to unlock scalable integrations with new banking partners.",
+        "Managed the SDK cloud infrastructure on Azure (App Service, Key Vault, Application Insights), ensuring secure deployment, fault tolerance, and monitoring of the integration layer.",
+        "Established platform engineering standards adopted by 12+ engineers and accelerated engineering velocity by 60% through AI-assisted Spec-Driven Development and architecture reviews."
       ]
     },
     "wizeline": {
       "role": "Senior Software Engineer",
-      "location": "Guadalajara, MX (Remote)",
-      "bullets": [],
-      "subprojects": {
-        "boattrader": {
-          "name": "BoatTrader",
-          "description": "Contributed to a 15% increase in organic traffic by improving Core Web Vitals and reducing page load times."
-        },
-        "synchrony": {
-          "name": "Synchrony",
-          "description": "Led frontend performance initiatives, refactoring state management, and optimizing GraphQL data-fetching strategies."
-        }
-      }
-    },
-    "freelance": {
-      "role": "Independent Software Contractor",
-      "location": "Guadalajara, MX (Remote)",
-      "bullets": [],
-      "subprojects": {
-        "tono": {
-          "name": "TonoHealth",
-          "description": "Implemented video consultations, real-time messaging, authentication flows, and Stripe payment processing."
-        },
-        "gm": {
-          "name": "General Motors",
-          "description": "Implemented message-driven workflows and asynchronous communication patterns to process vehicle usage events and trigger personalized customer engagement campaigns."
-        }
-      }
-    },
-    "luxoft_second_stage": {
-      "role": "Senior Software Engineer",
-      "location": "Guadalajara, MX (Remote)",
+      "location": "Guadalajara, Mexico (Remote)",
       "bullets": [
-        "Led a team of 5 engineers delivering developer platform initiatives and internal tooling improvements for Expedia Group.",
-        "Integrated Spotify Backstage into Expedia's engineering ecosystem, improving service discovery and developer experience.",
-        "Conducted technical interviews and contributed to frontend engineering hiring decisions."
+        "Led full-stack architecture and performance initiatives for a high-traffic financial marketplace within a 6-person team, resolving bottlenecks across frontend rendering, GraphQL queries, and application infrastructure.",
+        "Redesigned the data-delivery architecture, improving page load times by 45%, raising Lighthouse scores from 60 to 90, and driving a sustained 15% increase in organic traffic via SEO.",
+        "Developed complex reporting screens and analytics-driven financial data tables that helped users evaluate financial products more effectively."
       ]
     },
     "clip": {
       "role": "Full Stack Engineer",
-      "location": "Guadalajara, MX (Remote)",
+      "location": "Guadalajara, Mexico (Remote)",
       "bullets": [
-        "Designed and implemented event-driven payment-processing microservices on AWS Lambda using RabbitMQ messaging patterns, supporting 200K+ daily transactions across a customer base exceeding 500K users.",
-        "Collaborated with cross-functional teams to improve reliability, observability, and operational scalability of payment infrastructure.",
-        "Contributed to backend architecture discussions and cloud-native service design initiatives."
+        "Designed and implemented event-driven microservices and fault-tolerant messaging pipelines using AWS Lambda, SNS, and RabbitMQ to reliably process 200K+ daily payment transactions.",
+        "Engineered scalable distributed backend services for a customer base of 500K+ users, collaborating with a 6-person platform squad on dead-letter queues and infrastructure observability.",
+        "Drove backend architectural initiatives that improved the long-term scalability, data consistency, and operational resilience of critical payment-processing systems using PostgreSQL and DynamoDB."
       ]
     },
     "luxoft": {
       "role": "Software Engineer",
-      "location": "Guadalajara, MX (On-site)",
+      "location": "Guadalajara, Mexico",
       "bullets": [
-        "Led the design and adoption of a shared React component library containing 50+ reusable components used across multiple Expedia Group teams.",
-        "Reduced frontend development effort by approximately 40% through standardization and component reuse."
+        "Designed and implemented reusable platform components and shared architecture patterns across a 6-person team, adopted by multiple applications and engineering units.",
+        "Built frontend and backend solutions that accelerated feature delivery by 40% through improved code reuse, while contributing to analytics initiatives to increase customer conversions."
       ]
     },
     "ibm": {
       "role": "Application Developer",
-      "location": "Guadalajara, MX (On-site)",
+      "location": "Guadalajara, Mexico",
       "bullets": [
-        "Migrated 80+ legacy Handlebars views to React applications, reducing Time to Interactive by 55%.",
-        "Reduced database query execution times from 3 minutes to 30 seconds through indexing and query optimization."
+        "Migrated 80+ legacy Handlebars views into modern React applications, improving maintainability and reducing Time to Interactive by 55%.",
+        "Built operational interfaces and optimized backend data systems, cutting critical database query times from 3 minutes to 30 seconds through targeted NoSQL/DynamoDB indexing strategies."
       ]
     }
   },
   "skills": {
     "heading": "Skills",
     "frontend": "Frontend",
-    "backend": "Backend",
-    "databases": "Databases & Storage",
-    "devops": "DevOps & Tools"
+    "backend": "Backend & APIs",
+    "databases": "Databases & Messaging",
+    "devops": "Cloud & Infrastructure",
+    "architecture": "Architecture & Leadership"
   },
   "projects": {
     "heading": "Projects",
     "viewCode": "View Code",
     "viewDemo": "Live Demo",
     "featured": "Featured",
+    "ridecito_description": "A B2B carpooling platform that helps companies cut commuting emissions, with ESG Scope 3 CO₂ savings tracking. Full-stack MVP: React + TanStack Router frontend, Supabase Postgres with a deliberately flattened schema, and Deno Edge Functions for serverless backend logic and transactional email.",
     "me_description": "My personal portfolio and blog. Built with Next.js App Router, next-intl for multilingual support (EN/ES), Tailwind CSS v4, and framer-motion animations. Features dark mode, MDX blog, dynamic OG images, and RSS feed."
   },
   "contact": {
