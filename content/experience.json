@@ -1,40 +1,32 @@
 {
   "items": [
     {
+      "key": "ridecito",
+      "company": "Ridecito",
+      "start": "2026-01",
+      "end": null
+    },
+    {
       "key": "pay_mitto",
-      "company": "PayMitto",
+      "company": "Paymitto",
       "start": "2024-08",
       "end": null
     },
     {
       "key": "wizeline",
-      "company": "Wizeline",
+      "company": "Wizeline (Synchrony Financial)",
       "start": "2022-09",
-      "end": "2024-08",
-      "subprojects": [{ "key": "boattrader" }, { "key": "synchrony" }]
-    },
-    {
-      "key": "freelance",
-      "company": "Freelance",
-      "start": "2021-08",
-      "end": "2022-09",
-      "subprojects": [{ "key": "tono" }, { "key": "gm" }]
-    },
-    {
-      "key": "luxoft_second_stage",
-      "company": "Luxoft",
-      "start": "2021-02",
-      "end": "2021-08"
+      "end": "2024-08"
     },
     {
       "key": "clip",
       "company": "Clip",
       "start": "2020-07",
-      "end": "2021-02"
+      "end": "2022-09"
     },
     {
       "key": "luxoft",
-      "company": "Luxoft",
+      "company": "Luxoft (Expedia Group)",
       "start": "2019-08",
       "end": "2020-06"
     },

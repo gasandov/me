@@ -14,18 +14,18 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Germán Sandoval",
-    "title": "Ingeniero de Software Full-Stack",
-    "tagline": "Construyo aplicaciones web escalables con código limpio y UX cuidadosa.",
+    "title": "Ingeniero de Software Full Stack Senior",
+    "tagline": "Construyo y escalo plataformas de fintech, viajes y marketplaces desde hace 9+ años — del backend al frontend.",
     "cta_resume": "Ver CV",
     "cta_contact": "Contáctame"
   },
   "about": {
     "heading": "Sobre mí",
-    "bio": "Soy un ingeniero de software apasionado con experiencia en el desarrollo de aplicaciones web modernas. Me encanta la arquitectura limpia, la excelente experiencia del desarrollador y trabajar en productos que la gente disfruta.",
-    "bio2": "Cuando no estoy programando, me encontrarás explorando aprendiendo idiomas con Duolingo, viendo series, leyendo libros, tomando fotos o experimentando con proyectos personales.",
-    "location": "Con base en Mérida, MX",
+    "bio": "Soy ingeniero de software full-stack senior con más de 9 años diseñando y escalando plataformas de fintech, viajes y marketplaces. Trabajo de extremo a extremo — sistemas distribuidos, arquitectura orientada a eventos, diseño de APIs y SDKs, y arquitectura frontend — y disfruto ser dueño de un producto desde el diseño del sistema hasta la entrega.",
+    "bio2": "También lidero mediante mentoría, revisiones de arquitectura y RFCs técnicos. Cuando no estoy programando, aprendo idiomas, leo, tomo fotos, sigo la F1 o construyo proyectos personales como Ridecito.",
+    "location": "Mérida, México",
     "locationLabel": "Ubicación",
-    "status": "Abierto a nuevas oportunidades y relocación",
+    "status": "Abierto a oportunidades internacionales y a reubicarme en el extranjero",
     "statusLabel": "Estado",
     "stats": {
       "yearsExp": "Años de\nexperiencia",
@@ -35,9 +35,9 @@
       "label": "Idiomas",
       "list": [
         { "name": "Español", "level": "Nativo" },
-        { "name": "Inglés", "level": "Fluido" },
-        { "name": "Japonés", "level": "Aprendiendo" },
-        { "name": "Italiano", "level": "Aprendiendo" }
+        { "name": "Inglés", "level": "C1" },
+        { "name": "Alemán", "level": "A2" },
+        { "name": "Japonés", "level": "N5" }
       ]
     }
   },
@@ -45,94 +45,75 @@
     "heading": "Experiencia",
     "present": "Presente",
     "projects": "Proyectos",
+    "ridecito": {
+      "role": "Fundador e Ingeniero Principal",
+      "location": "Mérida, México · Proyecto personal",
+      "bullets": [
+        "Diseñé la arquitectura de un MVP de plataforma de carpooling B2B full-stack con React, TanStack Router y Supabase, incluyendo infraestructura para el seguimiento de ahorro de CO₂ (ESG Alcance 3).",
+        "Diseñé un esquema PostgreSQL aplanado para consolidar los datos de rutas de viajes, aplicando el principio YAGNI para mantener las consultas rápidas y el backend simple.",
+        "Construí la lógica de backend serverless con Supabase Deno Edge Functions e integré Resend para notificaciones transaccionales, con cumplimiento de GDPR y LFPDPPP."
+      ]
+    },
     "pay_mitto": {
       "role": "Ingeniero de Software Senior",
-      "location": "Mérida, MX (Remoto)",
+      "location": "Mérida, México (Remoto)",
       "bullets": [
-        "Contribuí a una plataforma que procesa más de 50K transacciones de pago diarias mediante integraciones con más de 10 socios bancarios y de pagos.",
-        "Seleccioné y definí el stack tecnológico frontend, los patrones de arquitectura y los estándares de ingeniería para un SDK de pagos internacionales desde cero, compatible con más de 15 monedas y 8 métodos de pago.",
-        "Diseñé e implementé el contrato de comunicación entre las aplicaciones anfitrionas y el SDK mediante mensajería de eventos basada en ventana, permitiendo una integración fluida entre múltiples socios bancarios y productos.",
-        "Establecí estándares de ingeniería frontend, incluyendo gestión de estado, patrones de obtención de datos, estrategias de carga y guías de arquitectura de aplicaciones para mejorar la escalabilidad y mantenibilidad.",
-        "Lideré los esfuerzos de arquitectura e implementación en tres iniciativas de producto concurrentes, coordinando el trabajo entre partes interesadas de frontend, backend y producto, mientras mentoreaba a ingenieros."
+        "Lideré la arquitectura y el desarrollo de un Web SDK de pagos internacionales y su capa de integración, desde cero, en un equipo de 8 personas, soportando más de 1M de transacciones anuales en más de 15 monedas.",
+        "Diseñé la arquitectura del SDK y definí los contratos de comunicación de API con los equipos de backend, estandarizando la capa de integración en más de 12 aplicaciones anfitrionas.",
+        "Desarrollé una extensión de webhooks que conecta el SDK frontend con la plataforma de banca digital Q2, mapeando flujos de ejecución complejos para habilitar integraciones escalables con nuevos socios bancarios.",
+        "Gestioné la infraestructura cloud del SDK en Azure (App Service, Key Vault, Application Insights), asegurando despliegues seguros, tolerancia a fallos y monitoreo de la capa de integración.",
+        "Establecí estándares de ingeniería de plataforma adoptados por más de 12 ingenieros y aceleré la velocidad de ingeniería en un 60% mediante Desarrollo Guiado por Especificaciones asistido por IA y revisiones de arquitectura."
       ]
     },
     "wizeline": {
       "role": "Ingeniero de Software Senior",
-      "location": "Guadalajara, MX (Remoto)",
-      "bullets": [],
-      "subprojects": {
-        "boattrader": {
-          "name": "BoatTrader",
-          "description": "Contribuí a un aumento del 15% en el tráfico orgánico mejorando los Core Web Vitals y reduciendo los tiempos de carga de página."
-        },
-        "synchrony": {
-          "name": "Synchrony",
-          "description": "Lideré iniciativas de rendimiento frontend, refactorizando la gestión de estado y optimizando estrategias de obtención de datos con GraphQL."
-        }
-      }
-    },
-    "freelance": {
-      "role": "Contratista de Software Independiente",
-      "location": "Guadalajara, MX (Remoto)",
-      "bullets": [],
-      "subprojects": {
-        "tono": {
-          "name": "TonoHealth",
-          "description": "Implementé consultas de video, mensajería en tiempo real, flujos de autenticación y procesamiento de pagos con Stripe."
-        },
-        "gm": {
-          "name": "General Motors",
-          "description": "Implementé flujos de trabajo orientados a mensajes y patrones de comunicación asíncrona para procesar eventos de uso vehicular y desencadenar campañas de participación personalizada con clientes."
-        }
-      }
-    },
-    "luxoft_second_stage": {
-      "role": "Ingeniero de Software Senior",
-      "location": "Guadalajara, MX (Remoto)",
+      "location": "Guadalajara, México (Remoto)",
       "bullets": [
-        "Lideré un equipo de 5 ingenieros entregando iniciativas de plataforma para desarrolladores y mejoras de herramientas internas para Expedia Group.",
-        "Integré Spotify Backstage en el ecosistema de ingeniería de Expedia, mejorando el descubrimiento de servicios y la experiencia del desarrollador.",
-        "Conduje entrevistas técnicas y contribuí a las decisiones de contratación de ingeniería frontend."
+        "Lideré iniciativas de arquitectura full-stack y rendimiento para un marketplace financiero de alto tráfico en un equipo de 6 personas, resolviendo cuellos de botella en el renderizado frontend, las consultas GraphQL y la infraestructura de la aplicación.",
+        "Rediseñé la arquitectura de entrega de datos, mejorando los tiempos de carga de página en un 45%, elevando la puntuación de Lighthouse de 60 a 90 y logrando un aumento sostenido del 15% en tráfico orgánico vía SEO.",
+        "Desarrollé pantallas de reportes complejas y tablas de datos financieros orientadas a analítica que ayudaron a los usuarios a evaluar productos financieros de forma más efectiva."
       ]
     },
     "clip": {
       "role": "Ingeniero Full-Stack",
-      "location": "Guadalajara, MX (Remoto)",
+      "location": "Guadalajara, México (Remoto)",
       "bullets": [
-        "Diseñé e implementé microservicios de procesamiento de pagos orientados a eventos en AWS Lambda usando patrones de mensajería RabbitMQ, soportando más de 200K transacciones diarias en una base de clientes que supera los 500K usuarios.",
-        "Colaboré con equipos multifuncionales para mejorar la confiabilidad, observabilidad y escalabilidad operativa de la infraestructura de pagos.",
-        "Contribuí a discusiones de arquitectura backend e iniciativas de diseño de servicios nativos en la nube."
+        "Diseñé e implementé microservicios orientados a eventos y pipelines de mensajería tolerantes a fallos usando AWS Lambda, SNS y RabbitMQ para procesar de forma confiable más de 200K transacciones de pago diarias.",
+        "Desarrollé servicios de backend distribuidos y escalables para una base de más de 500K usuarios, colaborando con un equipo de plataforma de 6 personas en dead-letter queues y observabilidad de la infraestructura.",
+        "Impulsé iniciativas de arquitectura backend que mejoraron la escalabilidad a largo plazo, la consistencia de datos y la resiliencia operativa de sistemas críticos de procesamiento de pagos usando PostgreSQL y DynamoDB."
       ]
     },
     "luxoft": {
       "role": "Ingeniero de Software",
-      "location": "Guadalajara, MX (On-site)",
+      "location": "Guadalajara, México",
       "bullets": [
-        "Lideré el diseño y adopción de una biblioteca de componentes React compartida con más de 50 componentes reutilizables utilizados en múltiples equipos de Expedia Group.",
-        "Reduje el esfuerzo de desarrollo frontend en aproximadamente un 40% mediante la estandarización y reutilización de componentes."
+        "Diseñé e implementé componentes de plataforma reutilizables y patrones de arquitectura compartidos en un equipo de 6 personas, adoptados por múltiples aplicaciones y unidades de ingeniería.",
+        "Construí soluciones frontend y backend que aceleraron la entrega de funcionalidades en un 40% mediante una mayor reutilización de código, contribuyendo además a iniciativas de analítica para aumentar las conversiones de clientes."
       ]
     },
     "ibm": {
       "role": "Desarrollador de Aplicaciones",
-      "location": "Guadalajara, MX (On-site)",
+      "location": "Guadalajara, México",
       "bullets": [
-        "Migré más de 80 vistas legacy de Handlebars a aplicaciones React, reduciendo el Time to Interactive en un 55%.",
-        "Reduje los tiempos de ejecución de consultas de base de datos de 3 minutos a 30 segundos mediante indexación y optimización de consultas."
+        "Migré más de 80 vistas legacy de Handlebars a aplicaciones React modernas, mejorando la mantenibilidad y reduciendo el Time to Interactive en un 55%.",
+        "Construí interfaces operativas y optimicé sistemas de datos backend, reduciendo los tiempos de consultas críticas de 3 minutos a 30 segundos mediante estrategias de indexación NoSQL/DynamoDB."
       ]
     }
   },
   "skills": {
     "heading": "Habilidades",
     "frontend": "Frontend",
-    "backend": "Backend",
-    "databases": "Bases de Datos & Almacenamiento",
-    "devops": "DevOps & Herramientas"
+    "backend": "Backend & APIs",
+    "databases": "Bases de Datos & Mensajería",
+    "devops": "Cloud & Infraestructura",
+    "architecture": "Arquitectura & Liderazgo"
   },
   "projects": {
     "heading": "Proyectos",
     "viewCode": "Ver Código",
     "viewDemo": "Demo en Vivo",
     "featured": "Destacado",
+    "ridecito_description": "Una plataforma de carpooling B2B que ayuda a las empresas a reducir las emisiones de sus traslados, con seguimiento de ahorro de CO₂ (ESG Alcance 3). MVP full-stack: frontend con React + TanStack Router, Supabase Postgres con un esquema deliberadamente aplanado y Deno Edge Functions para la lógica de backend serverless y el correo transaccional.",
     "me_description": "Mi portafolio personal y blog. Construido con Next.js App Router, next-intl para soporte multilingüe (EN/ES), Tailwind CSS v4 y animaciones con framer-motion. Incluye modo oscuro, blog MDX, imágenes OG dinámicas y feed RSS."
   },
   "contact": {

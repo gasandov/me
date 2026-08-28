@@ -19,11 +19,24 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    title: "Ridecito",
+    descriptionKey: "ridecito_description",
+    stack: [
+      "React",
+      "TanStack Router",
+      "Supabase",
+      "PostgreSQL",
+      "Deno Edge Functions",
+      "Zustand",
+    ],
+    demo: "https://ridecito.com",
+    featured: true,
+  },
+  {
     title: "me",
     descriptionKey: "me_description",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "next-intl", "MDX"],
     github: "https://github.com/gasandov/me",
-    featured: true,
   },
 ];
 

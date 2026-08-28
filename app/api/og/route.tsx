@@ -6,7 +6,7 @@ export const runtime = "edge";
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const title = searchParams.get("title") ?? "Germán Sandoval";
-  const description = searchParams.get("description") ?? "Full-Stack Software Engineer";
+  const description = searchParams.get("description") ?? "Senior Full Stack Engineer";
 
   return new ImageResponse(
     (
